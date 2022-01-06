@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <style>
+  .fa{
+    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 3px 1px;
+    
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-twitter{
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-linkedin{
+    background: #007bb5;
+    color: white;
+  }
+  .fa-whatsapp{
+     background: green;
+     color: white;
+  }
+  .fa-pinterest-p{
+    background: #cb2027;
+    color: white;
+  }
+  .fa-flickr{
+    background: blue;
+    color: white;
+  }
+  .weg {
+    background-color: black;
+    color: white;
+  }
+</style>
+
+	<style>
+body {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.tye{
+  background-color: white;
+  color: black;
+  padding: 0px;
+  width: 10%;
+  text-align: left;
+ }
+ .tye:hover, .tye:focus{
+  color: blue;
+ }
+</style>
+	
+<style>
+  .all-browsers {
+    margin: 0;
+    padding: 5px;
+    background-color: grey;
+  }
+
+  .all-browsers > h1, .browser{
+    margin: 10px;
+    padding: 5px;
+    color: black;
+  }
+
+  .browser{
+    background: white;
+  }
+
+  .browser > h2, p{
+    margin: 4px;
+    font-size: 90%;
+  }
+  footer {
+    text-align: center;
+    padding: 3px;
+    background-color: blueviolet;
+    color: white;
+  }
+  .footer{
+    padding: 8px;
+    background-color: grey;
+    color: black;
+  }
+</style>
+
+
+</style>
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0,0,0, 0.9);
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: left;
+  margin-top: 0px;
+  top: 80px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: grey;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  color: white;
+  top: 0px;
+  right: 45px;
+  font-size: 30px;
+}
+
+.trong {
+  text-align: left;
+  padding: 14px 16px;
+  background-color: indigo;
+  color: whitesmoke;
+}
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+</style>
+
+<style>
+  body {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 20px;
+  }
+  #myBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 8px;
+    border: none;
+    outline: none;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 60%;
+  }
+  #myBtn: hover {
+    background-color: #555;
+  }
+</style>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial,Helvetica,sans-serif;
+  }
+  .topnav{
+    overflow: hidden;
+    background-color: blueviolet;
+  }
+  .topnav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav a.active {
+    background-color: blueviolet;;
+    color: white;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="topnav">
+    <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\api.html" title=" Back to Courses"><i class="fa fa-arrow-left"></i></a>
+    <a class="active">Network Topologies</a>
+    <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\Asvan launcher.html"><i class="fa fa-home" title="Home"></i></a>
+    <a href="#" title="Refresh" class="risk"><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i></a>
+    <a href="#" title="More"><i class="fa fa fa-ellipsis-v"></i></a>
+    </div>
+  
+
+
+ <div id="myNav" class="overlay">
+  <footer class="trong">ASV Launcher</footer>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <ul><a href="C:\Users\dorby-launch\Desktop\PROJECT\html\Asvan launcher.html"><i class="fa fa-home"></i>Home</a>
+   <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\api.html"><i class="fa fa-laptop"></i>Courses</a>
+   <a href="#"><i class="fa fa-exclamation-circle"></i>About</a> 
+   <hr>
+    <a href="#" ><i class="fa fa-cog fa-spin fa-3x fa-fw"></i>Settings</a>
+   <button onclick="myFunction()"
+style="width:auto;" class="tye">Dark/Light mode</button>
+ 
+</ul>
+  </div>
+</div>
+
+<button onclick="topFunction()"
+  id="myBtn" title="Go to top"><i class="fa fa-chevron-up"></i></button>
+<script>
+  //Get the button
+  var mybutton=
+  document.getElementById('myBtn');
+
+  //When the user scrolls down 20px from the top of the document,show the button
+  window.onscroll=function()
+  {scrollFunction()};
+  function scrollFunction(){
+    if (document.body.scrollTop >
+      20||
+      document.documentElement.scrollTop >
+      20){
+      mybutton.style.display="block";
+    } else{
+      mybutton.style.display="none";
+    }
+  }
+  
+  // When the user clicks on the button,scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop=0;
+    document.documentElement.scrollTop=0;
+  }
+</script>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<script>
+
+function openNav() {
+  document.getElementById("myNav").style.width = "50%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+  
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+<h1 style="text-align:center;">Understanding Networking Fundamentals</h1>
+<p>In many cases,networking today has become a relatively simple plug-and-play process.Wireless card can automatically detect and join networks.Getting your network running may require a lot of configuration,and one messed-up setting can cause the whole thing to fail.The following sections cover the fundamentals.</p>
+
+<h3 style="text-align:center;">LANs,WANs,PANs,and MANs.</h3>
+<p><i>Local area networks(LANs)</i>were introduced to connect computers in a single office or building.<i>Wide area networks(WANs)</i>expanded the LANs to include networks outside the local environment and also to distribute resources <mark>across great distances.</mark> Generally,its safe to think of a WAN as multiple,disbursed LANs connected together.Having two types of network categories just didn't feel like enough, so the industry introduced two more terms: the personal area network and the metropolitan area network. <p style="color:red;">The <i>personal area network(PAN)</i> is a very small-scale network designed around one person within a very limited boundary area.</p>
+<h3>LANs</h3>
+<img src="///C:/Users/dorby-launch/Desktop/PROJECT/image/lan.png" style="width:100%">
+<h3>WANs</h3>
+<img src="//C:/Users/dorby-launch/Desktop/PROJECT/image/wan.png" style="width:100%">
+<h2 id="pri">Primary Networks Components</h2>
+<p>When you're looking at the devices or resources available on a network,there are three types of components of which you should be aware:</p><br>
+<a href="#C5">1. Servers</a><br>
+<a>2. Clients or Workstations</a><br>
+<a>3.Resources</a>
+
+<h3 style="text-align:center;">Servers</h3>
+<p>Servers comes in many shapes and sizes.They are a core component of the network, providing a link to the resources necessary to perform any task.The link that the server provides could be to a resource existing on the server itself or a resource o n a client computer. Servers offers networks the capability of centralizing the control of resources and security,thereby reducing administrative difficulties.</p>
+<p>Servers can perform several different critical roles on a network. For example,server that provide files to the users on the network are called <i style="color:red;">file servers.</i></p>
+<h3 style="text-align:center;">Workstations</h3>
+<p>They are computers on which the network users do their work, performing activities such as word processing, database design.email,and other office / personal tasks. As clients they are allowed to communicate with the servers in the network to use the network's resources</p>
+<h2 style="text-align:center;" id="resources">Network Resources</h2>
+<p>We now have the server to share the resources and the workstation to use them, but what about the resources themselves? A <i style="color:brown"> resource</i> (as far as the network is concerned) ia any item that can be used on a network. Resources can include a broad range of items,but the following items are among the most important:</p>
+<i>!. Printers and other peripherals</i><br>
+<i>2.Disk storage and the file access</i><br>
+<i>3.Applications</i>
+<p>Networks also give users more storage space to store their files. Client computers can't always handle the overhead involved in storing large files(for example,database files) because they are already heavily involved in users' day-to-day work activities. Because servers in a network can be dedicated to only certain functions, a server can be allocated to store all of the larger files that used every day, freeing up disk space on client computers.</p>
+<p style="text-align:justify">Files that all users need to access (such as emergency contact lists and company policies) can also be stored on a server. Applications (programs) no longer need to be on every computer in the office.If the server is capable of handling the overhead that an application requires, the application can reside on the server.</p>
+<h3 style="text-align:center;" id="ty">Peer-Peer Networks</h3>
+<p>In peer-to-peer network,the computers act as both service providers and service requestors.</p><img src="/C:/Users/dorby-launch/Desktop/PROJECT/image/peer.png"><i>Peer-to-peer resource model</i>
+<p>The peer-to-peer model is great for small,simple, inexpensive networks. Peer-to-peer resource models are generally considered the right choice for small companies that didn't expect future growth.</p>
+<h3 style="text-align:center;">Client-Server Resource Model</h3>
+<p>Client-server(also known as server-based) model is better than the peer-to-peer model for large networks that need a more secure environment and centralised control. Server-based networks use one or more dedicated, centralised servers. All administrative functions and resources sharing are performed from this point.</p><img src="/C:/Users/dorby-launch/Desktop/PROJECT/image/client.jpg" width="60%"><i>Client-server resource model</i>
+<p>Server-based networks are often known as <i style="color:blue">domains.</i></p>
+<h3 style="text-align:center" id="topo">Network Topologies</h3>
+<p>A topology is the arrangement/structure or the way of laying out the networks</p>
+<p>There are five primary topologies:</p>
+<a href="#r9">Bus</a><br><a href="#y87">Star</a><br><a href="#d7">Ring</a><br>
+<a href="#d6">Mesh</a><br><a href="#d5">Hybrid</a>
+<h4  id="r9">Bus topology</h4>
+<p>A bus topology is the simplest. It consist of a single cable that runs to every workstation. This topology uses the least amount of cabling. With a bus topology,messages pass through the trunk, and each workstation checks to see if a message is addressed to it.</p>
+<img src="/C:/Users/dorby-launch/Desktop/PROJECT/image/bus.png"><i>Bus topology</i>
+<p>Cable systems that use the bus topology are easy to install. Although the bus topology uses the least amount of cabling, it is difficult to add a workstation.</p>
+</p>
+<h4 id="y87">Star Topology</h4>
+<p>A star topology branches each network device called a <i style="color:red">hub or a switch,</i>making it easy to add a new workstation. If a workstation goes down, It does not affect the entire network. Because of this the hub (or switch) is called <i style="color:orange;">single point of failure.</i></p><img src="/C:/Users/dorby-launch/Desktop/PROJECT/image/stare.png">
+<p>Star topology are easy in tall. A cable is run from each workstation to the hub. Star topologies are more expensive to install than bus networks because several cables need to be installed, plus the hubs.</p>
+<h4 id="d7">Ring Topology</h4>
+<p>In a ring topology, each computer connects to two other computers, joining them in a circle and creating a unidirectional path where messages move from workstation to workstation. A ring makes it difficult to add new computers. Unlike the star topology network,the ring topology network will go down if one entity is removed from the ring.</p><img src="/C:/Users/dorby-launch/Desktop/PROJECT/image/ring.jpg" width="60%"><i>Ring topology</i>
+<h4  id="d6">Mesh Topology</h4>
+<p> The mesh topology is the most complex in terms of physical design. In this topology, each device is connected to every other device. If there are x computers,there will be <i style="color:green">(x times (x-1))/ 2 cables in the network.</i>For example, if you have five computers in a mesh network, it will use 5 times(5-1) divided by 2 = 10 cables. Because of its design, the physical mesh topology is expensive to install and maintain.</p>
+<img src="/C:/Users/dorby-launch/Desktop/PROJECT/image/mesh.png"><i>Mesh topology</i>
+ <p> Cables must run from each device to every other device. With mesh topology, there will always be a way to get the data from source to destination.</p>
+ <h4 id="d5">Hybrid Topology</h4>
+ <p>The hybrid topology is simply a mix of the other topologies. The hybrid gives a combination of the best features of each topology used. In fact, most networks today are not only hybrid but heterogeneous (they include a mix of components of different types and brands). The hybrid network is complex(less so than mesh). They may be more expensive than some types of network topologies, but it takes the best features of all of the other topologies and exploits them.</p>
+<img src="/C:/Users/dorby-launch/Desktop/PROJECT/image/hybrid.png">
+ <h2 style="text-align:center;" id="hard">Identifying Common Network Hardware</h2>
+ <p>We have looked at the types of networks, network topologies, and the way communications are handled. To really get computers to talk to each other requires hardware. Every computer on the network needs to have a network adapter of some type.</p>
+ <h3 id="nic">Network Interface Cards (NICS)</h3>
+ <p>The <i style="color: blue;">network interface card (NIC)</i>, also referred to as network adapter card, provides the physical interface between computer and cabling. It prepares data,sends data, and controls the flow of data. It can also receive and translate data into bytes for the CPU to understand. NICs comes in different shapes and sizes.</p>
+ <h4>Compatibility</h4>
+ <p>The first thing to consider is whether the NIC will fit the bus type of your PC. If you have more than one type of bus in your bus in your PC. More and more computers are using NICs that have USB interfaces. For the rare laptop computer that doesn't otherwise have a NIC built into it, these small portable cards are very handy.</p>
+ <h4>Nic Drivers</h4>
+ <p>For the computer to use the NIC, it is very important to install the proper device drivers. These drivers are pieces of software that communicate directly with the operating system,specifically the network redirector and adapter interface.</p>
+ <h3 id="cab">Cables and Connectors</h3>
+ <p>When the data is passing through the OSI model and reaches the Physical layer, it must find its way onto the medium that is used to transfer data physically from computer to computer. The medium is called <i>cable</i>(or in the case of wireless networks, the air). It is the NIC's role to prepare the data for transmission,but it is the cable's role to move the data properly to its intended destination. There are three main types of physical cabling to discuss: coaxial cable, twisted-pair cable,fiber-optic cable.</p>
+ <h4>Coaxial Cable</h4>
+ <p><i>Coaxial cable</i>(or coax) contains a center conductor core made of copper, which is surrounded by a plastic jacket with a braided shield over it. Either Teflon or a plastic coating covers this metal shield</p><br>
+ <i>Coaxial cable</i><br>
+ <img src="/C:/Users/dorby-launch/Desktop/PROJECT/image/coax.png">
+ <p>Common network cables are covered with a plastic called <i>polyvinyl chloride (PVC)</i>. While PVC is flexible,fairly durable, and inexpensive, it has a nasty side effect in that it produces poisonous gas when burned. An alternative is a Teflon-type covering that is frequently referred to as a <i>plenum-rated coating.</i></p>
+ <h3>Twisted-Pair Cable</h3>
+ <p>Twisted pair is the most popular type of cabling to use because of its flexibility and low cost. It consist of several pairs of wire twisted around each other within an insulated jacket.</p>
+ <img src="/C:/Users/dorby-launch/Desktop/PROJECT/image/twist.png"><i>Twisted-Pair</i>
+<p> There are two different types of twisted- pair:<i>Shielded twisted-pair (STP) and unshielded twisted-pair (UTP).</i>
+Both type sof cables have two or four pairs of twisted wires going through wires to decrease electrical interference. UTP has a PVC or plenum coating but no outer foil shield to protect it from interference.</p>
+
+<h3>Fiber-Optic</h3>
+<p>Fiber-optic cabling has been called one of the best advances in cabling. It consists of a thin,flexible glass or plastic fiber surrounded by a rubberized outer coating. It provides transmission speeds from 100Mbps to 10Gbps and a minimum distance of several miles. Because it uses pulses of light instead of electric voltages to transmit data.</p>
+<img src="/C:/Users/dorby-launch/Desktop/PROJECT/image/fiber.png">
+
+<h2 style="text-align:center;" id="comp">Networking Components</h2>
+<p>Network cabling can link one computer to another, but most networks are far grander in scale than two simple machines. There are a variety of networking devices that provide connectivity to the network, make the network bigger,and offer auxiliary services to end users.</p>
+
+<article class="all-browsers">
+   <h1>Most Popular Browers</h1>
+   <article class="browser">
+    <h2>Google Chrome</h2>
+    <p>Google chrome is web browser developed by Google, released in 2008.</p>
+ </article>
+ <article class="browser">
+   <h2>Microsoft edge</h2>
+   <p>Microsoft Edge is a web browser developed by Microsoft,released in 2013.</p>
+ </article>
+<article class="browser">
+  <h2><i>About Us</i></h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam</p>
+</article>
+
+<footer>
+  <p>Asvan-launcher<br>
+    <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\Asvan launcher.html"></a></p>
+</footer>
+<article class="browser">
+  <div class="container">
+          <label for="uname">
+          </label>
+          <input type="text"
+          placeholder="Enter Email" name="uname" required>
+        </div>
+</article>
+</article>
+
+<footer class="weg">
+  <a href="#" class="fa fa-facebook-official"></a>
+  <a href="#" class="fa fa-pinterest-p"></a>
+  <a href="#" class="fa fa-twitter"></a>
+  <a href="#" class="fa fa-flickr"></a>
+  <a href="#" class="fa fa-linkedin"></a>
+  <a href="#" class="fa fa-whatsapp"></a>
+  <h3 class="w3-medium">
+  Powered by <a href="www.asvan.com" target="_blank">Asvan</a>
+  </h3>
+  <p>Copyright @2021 All rights reserved |
+  This template is made by Amzi Group Of Company.</p>
+</footer>	
+</body>
+</body>
+</html>

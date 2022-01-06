@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <style>
+  .fa{
+    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 3px 1px;
+    
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-twitter{
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-linkedin{
+    background: #007bb5;
+    color: white;
+  }
+  .fa-whatsapp{
+     background: green;
+     color: white;
+  }
+  .fa-pinterest-p{
+    background: #cb2027;
+    color: white;
+  }
+  .fa-flickr{
+    background: blue;
+    color: white;
+  }
+  .weg {
+    background-color: black;
+    color: white;
+  }
+</style>
+
+	<style>
+body {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.tye{
+  background-color: white;
+  color: black;
+  padding: 0px;
+  width: 10%;
+  text-align: left;
+ }
+ .tye:hover, .tye:focus{
+  color: blue;
+ }
+</style>
+	
+<style>
+  .all-browsers {
+    margin: 0;
+    padding: 5px;
+    background-color: grey;
+  }
+
+  .all-browsers > h1, .browser{
+    margin: 10px;
+    padding: 5px;
+    color: black;
+  }
+
+  .browser{
+    background: white;
+  }
+
+  .browser > h2, p{
+    margin: 4px;
+    font-size: 90%;
+  }
+  footer {
+    text-align: center;
+    padding: 3px;
+    background-color: blueviolet;
+    color: white;
+  }
+  .footer{
+    padding: 8px;
+    background-color: grey;
+    color: black;
+  }
+</style>
+
+
+</style>
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0,0,0, 0.9);
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: left;
+  margin-top: 0px;
+  top: 80px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: grey;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  color: white;
+  top: 0px;
+  right: 45px;
+  font-size: 30px;
+}
+
+.trong {
+  text-align: left;
+  padding: 14px 16px;
+  background-color: indigo;
+  color: whitesmoke;
+}
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+</style>
+
+<style>
+  body {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 20px;
+  }
+  #myBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 8px;
+    border: none;
+    outline: none;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 60%;
+  }
+  #myBtn: hover {
+    background-color: #555;
+  }
+</style>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial,Helvetica,sans-serif;
+  }
+  .topnav{
+    overflow: hidden;
+    background-color: blueviolet;
+  }
+  .topnav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav a.active {
+    background-color: blueviolet;;
+    color: white;
+  }
+</style>
+<style>
+  
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: grey;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: grey;
+}
+table {
+    font-family: arial,sans-serif;
+border-collapse: collapse;
+width: 100%;
+  }
+  /*link them as one*/
+  td,th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 4px;
+  }
+  tr:nth-child(even) {
+    background-color: lightgrey;
+  }
+</style>
+<style>
+  body{
+    background-color: lightgrey;
+  }
+</style>
+</head>
+<body>
+
+<div class="topnav">
+    <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\api.html" title=" Back to Courses"><i class="fa fa-arrow-left"></i></a>
+    <a class="active">TECH Terms</a>
+    <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\Asvan launcher.html"><i class="fa fa-home" title="Home"></i></a>
+    <a href="#" title="Refresh" class="risk"><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i></a>
+    <a href="#" title="More"><i class="fa fa fa-ellipsis-v"></i></a>
+    </div>
+  
+
+
+ <div id="myNav" class="overlay">
+  <footer class="trong">ASV Launcher</footer>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <ul><a href="C:\Users\dorby-launch\Desktop\PROJECT\html\Asvan launcher.html"><i class="fa fa-home"></i>Home</a>
+   <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\api.html"><i class="fa fa-laptop"></i>Courses</a>
+   <a href="#"><i class="fa fa-exclamation-circle"></i>About</a> 
+   <hr>
+    <a href="#" ><i class="fa fa-cog fa-spin fa-3x fa-fw"></i>Settings</a>
+   <button onclick="myFunction()"
+style="width:auto;" class="tye">Dark/Light mode</button>
+ 
+</ul>
+  </div>
+</div>
+
+<button onclick="topFunction()"
+  id="myBtn" title="Go to top"><i class="fa fa-chevron-up"></i></button>
+<script>
+  //Get the button
+  var mybutton=
+  document.getElementById('myBtn');
+
+  //When the user scrolls down 20px from the top of the document,show the button
+  window.onscroll=function()
+  {scrollFunction()};
+  function scrollFunction(){
+    if (document.body.scrollTop >
+      20||
+      document.documentElement.scrollTop >
+      20){
+      mybutton.style.display="block";
+    } else{
+      mybutton.style.display="none";
+    }
+  }
+  
+  // When the user clicks on the button,scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop=0;
+    document.documentElement.scrollTop=0;
+  }
+</script>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<script>
+
+function openNav() {
+  document.getElementById("myNav").style.width = "50%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+  
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+<h1 style="text-align:center;">Computer and Internet Acronyms</h1>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for terms.." title="Type in a term" style="background-color:lightgrey; color: black;">
+<ul id="myUL">
+<table>
+  <tr>
+    <th style="background-color: lightblue;">Term</th></li>
+    <th style="background-color:lightblue;">Meaning</th>
+  </tr>
+
+  <td><li><a href="#">ACID</a></li></td>
+  <td>
+  Atomicity,Consistency,Isolation,Durability</td>
+
+<tr>
+  <td><li><a href="#">ACL</a></li></td>
+  <td>Access Control List</td>
+</tr>
+<tr>
+  <td><li><a href="#">ADF</a></li></td>
+  <td>Automatic Document Feeder</td>
+</tr>
+<tr>
+  <td><li><a href="#">ADSL</a></li></td>
+  <td>Asymmetric Digital Subscriber Line</td>
+</tr>
+<tr>
+<td><li><a href="#">AFP</a></li></td>
+  <td>Apple Filling Protocol</td>
+</tr>
+<tr>
+<td><li><a href="#">AGP</a></li></td>
+  <td>Accelerated Graphics Port</td>
+</tr>
+
+<tr>
+<td><li><a href="#">AIFF</a></li></td>
+  <td>Audio Interchange File Format</td>
+</tr>
+
+<tr>
+<td><li><a href="#">AIX</a></li></td>
+  <td>Advanced Interactive Executive</td>
+</tr>
+
+
+<tr>
+<td><li><a href="#">ALU</a></li></td>
+  <td>Arithmetric logic Unit</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ANR</a></li></td>
+  <td>Application Not Responding</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ANSI</a></li></td>
+  <td>American National Standards Institute</td>
+</tr>
+
+<tr>
+<td><li><a href="#">API</a></li></td>
+  <td>Application Program Interface</td>
+</tr>
+
+<tr>
+<td><li><a href="#">APM</a></li></td>
+  <td>Action Per Minute</td>
+</tr>
+
+<tr>
+<td><li><a href="#">APU</a></li></td>
+  <td>Accelerated Processing Unit</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ARP</a></li></td>
+  <td>Address Resolution Protocol</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ASCL</a></li></td>
+  <td>American Standard Code for Information Interchange</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ASO</a></li></td>
+  <td>App Store Optimization</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ASP</a></li></td>
+  <td>Active Server Page or Application Service Provider</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ATA</a></li></td>
+  <td>Advanced Technology Extended</td>
+</tr>
+
+<tr>
+<td><li><a href="#">AVR</a></li></td>
+  <td>Audio/Video Receiver</td>
+</tr>
+
+<tr>
+<td><li><a href="#">BASIC</a></li></td>
+  <td>Beginner's All-purpose Symbolic Instruction Code</td>
+</tr>
+
+<tr>
+<td><li><a href="#">BCC</a></li></td>
+  <td>Blind Carbon Copy</td>
+</tr>
+
+<tr>
+<td><li><a href="#">BIOS</a></li></td>
+  <td>Basic Input/Output System</td>
+</tr>
+
+<tr>
+<td><li><a href="#">BMP</a></li></td>
+  <td>Bitmap</td>
+</tr>
+
+<tr>
+<td><li><a href="#">CAD</a></li></td>
+  <td>Computer-Aided Design</td>
+</tr>
+
+<tr>
+<td><li><a href="#">CAN</a></li></td>
+  <td>Campus Area Network</td>
+</tr>
+
+<tr>
+<td><li><a href="#">Cc</a></li></td>
+  <td>Carbon Copy</td>
+</tr>
+
+<tr>
+<td><li><a href="#">CCD</a></li></td>
+  <td>Charged Coupled Device</td>
+</tr>
+
+<tr>
+<td><li><a href="#">CD</a></li></td>
+  <td>Compact Disc</td>
+</tr>
+
+
+<tr>
+<td><li><a href="#">CD-R</a></li></td>
+  <td>Compact Disc Recordable</td>
+</tr>
+
+<tr>
+<td><li><a href="#">CD-ROM</a></li></td>
+  <td>Compact Disc Read Only Memory</td>
+</tr>
+
+<tr>
+<td><li><a href="#">CD-RW</a></li></td>
+  <td>Copact Disk Re-Writable</td>
+</tr>
+
+<tr>
+<td><li><a href="#">CDFS</a></li></td>
+  <td>Compact Disc File System</td>
+</tr>
+
+<tr>
+<td><li><a href="#">CDN</a></li></td>
+  <td>Content Delivery Network</td>
+</tr>
+
+<tr>
+<td><li><a href="#">CISC</a></li></td>
+  <td>Complex Instruction Set Computing</td>
+</tr>
+
+<tr>
+<td><li><a href="#">CMOS</a></li></td>
+  <td>Complementary Metal Oxide Semiconductor</td>
+</tr>
+
+<tr>
+<td><li><a href="#">CMYK</a></li></td>
+  <td>Cyan Magenta Yellow Black</td>
+</tr>
+
+<tr>
+<td><li><a href="#">CPA</a></li></td>
+  <td>Cost Per Action</td>
+</tr>
+
+<tr>
+<td><li><a href="#">CPM</a></li></td>
+  <td>Cost Per 1,000 Impressions</td>
+</tr>
+
+<tr>
+<td><li><a href="#">CPU</a></li></td>
+  <td>Central Processing Unit</td>
+</tr>
+
+<tr>
+<td><li><a href="#">CRT</a></li></td>
+  <td>Cathode Ray Tube</td>
+</tr>
+
+<tr>
+<td><li><a href="#">CSS</a></li></td>
+  <td>Cascading Style Sheet</td>
+</tr>
+
+<tr>
+<td><li><a href="#">CUDA</a></li></td>
+  <td>Compute Unified Device Architecture</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DAW</a></li></td>
+  <td>Digital Audio Workstation</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DBMS</a></li></td>
+  <td>Database Management System</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DPCP</a></li></td>
+  <td>DisplayPort Content Protection</td>
+</tr>
+<tr>
+<td><li><a href="#">DCIM</a></li></td>
+  <td>Digital Camera Images</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DDL</a></li></td>
+  <td>Data Definition Language</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DDR</a></li></td>
+  <td>Double Data Rate</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DFS</a></li></td>
+  <td>Distributed File System</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DHCP</a></li></td>
+  <td>Dynamic Host Configuration Protocol</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DIMM</a></li></td>
+  <td>Dual in-Line Memory module</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DKIM</a></li></td>
+  <td>DomainKeys Identified Mail</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DLC</a></li></td>
+  <td>Downloadable Content</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DMA</a></li></td>
+  <td>Direct Memory Access</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DNS</a></li></td>
+  <td>Domain Name System</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DOS</a></li></td>
+  <td>Disk Operating System</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DPI</a></li></td>
+  <td>Dot Per Inch</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DRAM</a></li></td>
+  <td>Dynamic Random Access Memory</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DRM</a></li></td>
+  <td>Digital Rights Management</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DSL</a></li></td>
+  <td>Digital Subscriber Line</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DSLAM</a></li></td>
+  <td>Digital Subscriber Line Access Multiplexer</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DTD</a></li></td>
+  <td>Document Type Definition</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DV</a></li></td>
+  <td>Digital Video</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DVD</a></li></td>
+  <td>Digital Versatile Disc</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DVD &plus; R</a></li></td>
+  <td>Digital Versatile Disc Recordable</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DVD &plus;RW</a></li></td>
+  <td>Digital Versatile Disc Rewritable</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DVD-R</a></li></td>
+  <td>Digital Versatile Disc Recordable</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DVD-RAM</a></li></td>
+  <td>Digital Versatile Disc Random Access Memory</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DVI</a></li></td>
+  <td>Digital Video Interface</td>
+</tr>
+
+<tr>
+<td><li><a href="#">DVR</a></li></td>
+  <td>Digital Video Recorder</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ECC</a></li></td>
+  <td>Error Correction Code</td>
+</tr>
+
+<tr>
+<td><li><a href="#">EDI</a></li></td>
+  <td>Electronic Data Interchange</td>
+</tr>
+
+<tr>
+<td><li><a href="#">EMI</a></li></td>
+  <td>Electromagnetic Interferance</td>
+</tr>
+
+<tr>
+<td><li><a href="#">eGPU</a></li></td>
+  <td>External Graphics Processing Unit</td>
+</tr>
+
+<tr>
+<td><li><a href="#">eSATA</a></li></td>
+  <td>External Serial Advanced Technology Attachment</td>
+</tr>
+
+<tr>
+<td><li><a href="#">EXIF</a></li></td>
+  <td>Exchangeable Image File Format</td>
+</tr>
+
+<tr>
+<td><li><a href="#">FAQ</a></li></td>
+  <td>FRequently Asked Questions</td>
+</tr>
+
+<tr>
+<td><li><a href="#">FDDI</a></li></td>
+  <td>Fiber Distributed Data Interface</td>
+</tr>
+
+<tr>
+<td><li><a href="#">Fios</a></li></td>
+  <td>Fiber Optic Service</td>
+</tr>
+
+<tr>
+<td><li><a href="#">FTP</a></li></td>
+  <td>File Transfer Protocol</td>
+</tr>
+
+<tr>
+<td><li><a href="#">Gbps</a></li></td>
+  <td>Gigabits per Second</td>
+</tr>
+
+<tr>
+<td><li><a href="#">GPS</a></li></td>
+  <td>Global Positioning System</td>
+</tr>
+
+<tr>
+<td><li><a href="#">GPU</a></li></td>
+  <td>Graphics Processing Unit</td>
+</tr>
+
+<tr>
+<td><li><a href="#">GUI</a></li></td>
+  <td>Graphical User Interface</td>
+</tr>
+
+<tr>
+<td><li><a href="#">GUID</a></li></td>
+  <td>Globally Unique Identifier</td>
+</tr>
+
+<tr>
+<td><li><a href="#">HAN</a></li></td>
+  <td>Home Area Network</td>
+</tr>
+
+<tr>
+<td><li><a href="#">HD</a></li></td>
+  <td>High Definition</td>
+</tr>
+
+<tr>
+<td><li><a href="#">HDCP</a></li></td>
+  <td>High-bandwidth Digital Content Protection</td>
+</tr>
+<tr>
+<td><li><a href="#">HDD</a></li></td>
+  <td>Hard Disk Drive</td>
+</tr>
+
+<tr>
+<td><li><a href="#">HDMI</a></li></td>
+  <td>High-Definition Multimedia Interface</td>
+</tr>
+
+<tr>
+<td><li><a href="#">HDR</a></li></td>
+  <td>High Dynamic Range</td>
+</tr>
+
+<tr>
+<td><li><a href="#">HDTV</a></li></td>
+  <td>High Definition Television</td>
+</tr>
+
+<tr>
+<td><li><a href="#">HDV</a></li></td>
+  <td>High-Definition Video</td>
+</tr>
+
+<tr>
+<td><li><a href="#">HFS</a></li></td>
+  <td>Hierarchical File System</td>
+</tr>
+
+
+<tr>
+<td><li><a href="#">HSF</a></li></td>
+  <td>Heat Sink and Fan</td>
+</tr>
+
+<tr>
+<td><li><a href="#">HTML</a></li></td>
+  <td>Hyper-Text markup language</td>
+</tr>
+
+<tr>
+<td><li><a href="#">HTTPS</a></li></td>
+  <td>Hypertext Transfer Protocol Secure</td>
+</tr>
+
+<tr>
+<td><li><a href="#">I/O</a></li></td>
+  <td>Input/Output</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ICANN</a></li></td>
+  <td>Internet Corporation For Assigned Names and Numbers</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ICCID</a></li></td>
+  <td>Integrated Circuit Card Identifier</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ICF</a></li></td>
+  <td>Internet Connection Firewall</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ICMP</a></li></td>
+  <td>Internet Control message Protoccol</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ICS</a></li></td>
+  <td>Internet Connection Sharing</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ICT</a></li></td>
+  <td>Information and Communication Technologies</td>
+</tr>
+
+<tr>
+<td><li><a href="#">IDE</a></li></td>
+  <td>Integrated Device Electronics or  Integrated Development Environment</td>
+</tr>
+
+<tr>
+<td><li><a href="#">IEEE</a></li></td>
+  <td>Institute of Electrical and Electronics Engineers</td>
+</tr>
+
+<tr>
+<td><li><a href="#">IGP</a></li></td>
+  <td>Integrated Graphics Processors</td>
+</tr>
+
+<tr>
+<td><li><a href="#">IIS</a></li></td>
+  <td>Internet Information Services</td>
+</tr>
+
+<tr>
+<td><li><a href="#">IM</a></li></td>
+  <td>Instant Message</td>
+</tr>
+
+<tr>
+<td><li><a href="#">IMAP</a></li></td>
+  <td>Internet Message Access Protocol</td>
+</tr>
+<tr>
+<td><li><a href="#">IMEI</a></li></td>
+  <td>Internet Mobile Equipment Identity</td>
+</tr>
+
+<tr>
+<td><li><a href="#">InterNIC</a></li></td>
+  <td>Internet Network Information Center</td>
+</tr>
+
+<tr>
+<td><li><a href="#">IOPS</a></li></td>
+  <td>Input/Output Operations Per Second</td>
+</tr>
+
+<tr>
+<td><li><a href="#">IP</a></li></td>
+  <td>Internet Protocol</td>
+</tr>
+
+<tr>
+<td><li><a href="#">IPC</a></li></td>
+  <td>Interprocess Communication</td>
+</tr>
+
+<tr>
+<td><li><a href="#">IPS</a></li></td>
+  <td>Intrusion Prevension System</td>
+</tr>
+
+<tr>
+<td><li><a href="#">IPX</a></li></td>
+  <td>Internetwork Packet Exchange</td>
+</tr>
+
+<tr>
+<td><li><a href="#">IrDA</a></li></td>
+  <td>Infrared Data Association</td>
+</tr>
+<tr>
+<td><li><a href="#">IRC</a></li></td>
+  <td>Internet Relay chat</td>
+</tr>
+
+<tr>
+<td><li><a href="#">IRQ</a></li></td>
+  <td>Interrupt Request</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ISA</a></li></td>
+  <td>Industry Standard Architecture</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ISCSI</a></li></td>
+  <td>Internet Small Computer Systems Interface</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ISDN</a></li></td>
+  <td>Intergrated Services Digital Network</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ISO</a></li></td>
+  <td>International Organization for Standardization</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ISP</a></li></td>
+  <td>Internet Service Provider</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ISR</a></li></td>
+  <td>Interrupt Service Routine</td>
+</tr>
+
+<tr>
+<td><li><a href="#">IT</a></li></td>
+  <td>Information Technology</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ITIL</a></li></td>
+  <td>Information Technology Infrastructure Library</td>
+</tr>
+
+<tr>
+<td><li><a href="#">IVR</a></li></td>
+  <td>Interactive Voice Response</td>
+</tr>
+
+<tr>
+<td><li><a href="#">JDBC</a></li></td>
+  <td>Java Database Connectivity</td>
+</tr>
+
+<tr>
+<td><li><a href="#">JFS</a></li></td>
+  <td>Journaled File System</td>
+</tr>
+
+<tr>
+<td><li><a href="#">JPEG</a></li></td>
+  <td>Joint Photographic Experts Group</td>
+</tr>
+
+<tr>
+<td><li><a href="#">JRE</a></li></td>
+  <td>Java Routine Environment</td>
+</tr>
+
+<tr>
+<td><li><a href="#">JSF</a></li></td>
+  <td>JavaServer Faces</td>
+</tr>
+
+<tr>
+<td><li><a href="#">JSON</a></li></td>
+  <td>JavaScript Object Notation</td>
+</tr>
+
+<tr>
+<td><li><a href="#">JSP</a></li></td>
+  <td>Java Server Page</td>
+</tr>
+
+<tr>
+<td><li><a href="#">JVM</a></li></td>
+  <td>Java Virtual Machine</td>
+</tr>
+
+<tr>
+<td><li><a href="#">Kbps</a></li></td>
+  <td>Kilobite Per Second</td>
+</tr>
+
+<tr>
+<td><li><a href="#">KDE</a></li></td>
+  <td>K DEsktop Environment</td>
+</tr>
+
+<tr>
+<td><li><a href="#">KVM Switch</a></li></td>
+  <td>Keyboard,Video, and Mouse  Switch</td>
+</tr>
+
+<tr>
+<td><li><a href="#">LAMP</a></li></td>
+  <td>Linux,Apache,MySQL,and PHP</td>
+</tr>
+
+<tr>
+<td><li><a href="#">LAN</a></li></td>
+  <td>Local Area Network</td>
+</tr>
+
+<tr>
+<td><li><a href="#">LCD</a></li></td>
+  <td>Liquid Crystal Display</td>
+</tr>
+
+<tr>
+<td><li><a href="#">LDAP</a></li></td>
+  <td>Lightweight Directory Access Protocol</td>
+</tr>
+
+<tr>
+<td><li><a href="#">LED</a></li></td>
+  <td>Light-Emitting Diode</td>
+</tr><tr>
+<td><li><a href="#">LFN</a></li></td>
+  <td>Long Filename</td>
+</tr><tr>
+<td><li><a href="#">LIFO</a></li></td>
+  <td>Last in,First out</td>
+</tr><tr>
+<td><li><a href="#">LPI</a></li></td>
+  <td>Lines Per Inch</td>
+</tr>
+<tr>
+<td><li><a href="#">LTE</a></li></td>
+  <td>Long Term Evolution</td>
+</tr><tr>
+<td><li><a href="#">LUN</a></li></td>
+  <td>Logical Unit Number</td>
+</tr><tr>
+<td><li><a href="#">MAC Address</a></li></td>
+  <td>Media Access Control Address</td>
+</tr><tr>
+<td><li><a href="#">MAMP</a></li></td>
+  <td>Mac OS X< Apache,MySQL,and PHP</td>
+</tr><tr>
+<td><li><a href="#">MANET</a></li></td>
+  <td>Mobile Ad Hoc Network</td>
+</tr><tr>
+<td><li><a href="#">Mbps</a></li></td>
+  <td>Megabits Per Second</td>
+</tr><tr>
+<td><li><a href="#">MBR</a></li></td>
+  <td>Master Boot Record</td>
+</tr><tr>
+<td><li><a href="#">MCA</a></li></td>
+  <td>Micro Channel Architecture</td>
+</tr><tr>
+<td><li><a href="#">MDI</a></li></td>
+  <td>Medium Dependent Interface</td>
+</tr><tr>
+<td><li><a href="#">MIDI</a></li></td>
+  <td>Musical Instrument Digital Interface</td>
+</tr><tr>
+<td><li><a href="#">MIPS</a></li></td>
+  <td>Million Instructions Per Second</td>
+</tr><tr>
+<td><li><a href="#">MIS</a></li></td>
+  <td>Management Information System</td>
+</tr><tr>
+<td><li><a href="#">MMS</a></li></td>
+  <td>Multimedia Messaging Service</td>
+</tr>
+<tr>
+<td><li><a href="#">MODEM</a></li></td>
+  <td>modulator/demodulator</td>
+</tr>
+<tr>
+<td><li><a href="#">MP3</a></li></td>
+  <td>MPEG-1 Audio layer-3</td>
+</tr><tr>
+<td><li><a href="#">MPEG</a></li></td>
+  <td>Moving Picture Experts Group</td>
+</tr><tr>
+<td><li><a href="#">MTU</a></li></td>
+  <td>Maximum Transmission Unit</td>
+</tr><tr>
+<td><li><a href="#">MVC</a></li></td>
+  <td>Model-View-Controller</td>
+</tr><tr>
+<td><li><a href="#">NAT</a></li></td>
+  <td>Network Address Translation</td>
+</tr><tr>
+<td><li><a href="#">NetBIOS</a></li></td>
+  <td>Network Basic Input/Output System</td>
+</tr><tr>
+<td><li><a href="#">NFC</a></li></td>
+  <td>Near Field Communication</td>
+</tr><tr>
+<td><li><a href="#">NFT</a></li></td>
+  <td>Non-Fungible Token</td>
+</tr><tr>
+<td><li><a href="#">NIC</a></li></td>
+  <td>Network Interface Card</td>
+</tr>
+
+<tr>
+<td><li><a href="#">NLX</a></li></td>
+  <td>New Low-Profile Extended</td>
+</tr>
+<tr>
+<td><li><a href="#">NMS</a></li></td>
+  <td>Network Management System</td>
+</tr><tr>
+<td><li><a href="#">NNTP</a></li></td>
+  <td>Network News Transfer Protocol</td>
+</tr><tr>
+<td><li><a href="#">NOC</a></li></td>
+  <td>Network Operations Center</td>
+</tr><tr>
+<td><li><a href="#">NOS</a></li></td>
+  <td>Network Operating System</td>
+</tr><tr>
+<td><li><a href="#">NSP</a></li></td>
+  <td>Network Service Provider</td>
+</tr><tr>
+<td><li><a href="#">NTFS</a></li></td>
+  <td>New Technology File System</td>
+</tr><tr>
+<td><li><a href="#">NTP</a></li></td>
+  <td>Network Time Protocol</td>
+</tr><tr>
+<td><li><a href="#">NUI</a></li></td>
+  <td>Natural User Interface</td>
+</tr><tr>
+<td><li><a href="#">NVRAM</a></li></td>
+  <td>Non-Volatile Random Access Memory</td>
+</tr><tr>
+<td><li><a href="#">OASIS</a></li></td>
+  <td>Organisation for the Advancement of Structured Information Standards</td>
+</tr><tr>
+<td><li><a href="#">OCR</a></li></td>
+  <td>Optical Character Recognition</td>
+</tr><tr>
+<td><li><a href="#">ODBC</a></li></td>
+  <td>Open Database Connectivity</td>
+</tr><tr>
+<td><li><a href="#">OEM</a></li></td>
+  <td>Original Equipment Manufacturer</td>
+</tr><tr>
+<td><li><a href="#">OLAP</a></li></td>
+  <td>Online Analytical Processing</td>
+</tr><tr>
+<td><li><a href="#">OLE</a></li></td>
+  <td>Object Linking and Embedding</td>
+</tr><tr>
+<td><li><a href="#">OLED</a></li></td>
+  <td>Organic Light Emmiting Diode</td>
+</tr><tr>
+<td><li><a href="#">OOP</a></li></td>
+  <td>Object-Oriented Programming</td>
+</tr><tr>
+<td><li><a href="#">OSPF</a></li></td>
+  <td>Open Shortest Path First</td>
+</tr><tr>
+<td><li><a href="#">OTA</a></li></td>
+  <td>Over-The-Air</td>
+</tr><tr>
+<td><li><a href="#">P2P</a></li></td>
+  <td>Peer-to-Peer</td>
+</tr><tr>
+<td><li><a href="#">PC</a></li></td>
+  <td>Personal Computer</td>
+</tr><tr>
+<td><li><a href="#">PCB</a></li></td>
+  <td>Printed Circuit Board</td>
+</tr>
+<tr>
+<td><li><a href="#">PCI</a></li></td>
+  <td>Peripheral Component Interconnect</td>
+</tr>
+
+<tr>
+<td><li><a href="#">PCI-X</a></li></td>
+  <td>Peripheral Component Interconnect Extended</td>
+</tr>
+<tr>
+<td><li><a href="#">PCMCIA</a></li></td>
+  <td>Personal Computer Memory Card International Association</td>
+</tr>
+
+<tr>
+<td><li><a href="#">PDA</a></li></td>
+  <td>Personal Digital Assistant</td>
+</tr>
+
+<tr>
+<td><li><a href="#">PDF</a></li></td>
+  <td>Portable Document Format</td>
+</tr>
+
+<tr>
+<td><li><a href="#">PDU</a></li></td>
+  <td>Protocol Data Unit</td>
+</tr>
+<tr>
+<td><li><a href="#">PHP</a></li></td>
+  <td>Hypertext Preprocessor</td>
+</tr>
+
+<tr>
+<td><li><a href="#">PIM</a></li></td>
+  <td>Personal Information Manager</td>
+</tr>
+
+<tr>
+<td><li><a href="#">PMU</a></li></td>
+  <td>Power Management Unit</td>
+</tr>
+
+<tr>
+<td><li><a href="#">PNG</a></li></td>
+  <td>Portable Network Graphic</td>
+</tr><tr>
+<td><li><a href="#">PoE</a></li></td>
+  <td>Power over Ethernet</td>
+</tr><tr>
+<td><li><a href="#">PON</a></li></td>
+  <td>Passive Optical Network</td>
+</tr><tr>
+<td><li><a href="#">POP3</a></li></td>
+  <td>Post Office Protocol</td>
+</tr><tr>
+<td><li><a href="#">POST</a></li></td>
+  <td>Power On Self Test</td>
+</tr><tr>
+<td><li><a href="#">POTS</a></li></td>
+  <td>Plain Old Telephone Service</td>
+</tr><tr>
+<td><li><a href="#">PPC</a></li></td>
+  <td>Pay Per Click</td>
+</tr><tr>
+<td><li><a href="#">PPGA</a></li></td>
+  <td>Plastic Pin Grid Array</td>
+</tr><tr>
+<td><li><a href="#">PPI</a></li></td>
+  <td>Pixels Per Inch</td>
+</tr><tr>
+<td><li><a href="#">PPPoE</a></li></td>
+  <td>Point-to-Point Protocol over Ethernet</td>
+</tr><tr>
+<td><li><a href="#">PPTP</a></li></td>
+  <td>Point-to-Point Tunneling Protocol</td>
+</tr><tr>
+<td><li><a href="#">PRAM</a></li></td>
+  <td>Parameter Random Access Memory</td>
+</tr>
+<tr>
+<td><li><a href="#">PROM</a></li></td>
+  <td>Programmable Read Only Memory</td>
+</tr>
+
+<tr>
+<td><li><a href="#">PS/2</a></li></td>
+  <td>Personal System/2</td>
+</tr>
+
+<tr>
+<td><li><a href="#">PUP</a></li></td>
+  <td>Potentially Unwanted Program</td>
+</tr>
+
+<tr>
+<td><li><a href="#">QBE</a></li></td>
+  <td>Query By Example</td>
+</tr>
+<tr>
+<td><li><a href="#">RAID</a></li></td>
+  <td>Redundant Array of Independent Disks</td>
+</tr>
+<tr>
+<td><li><a href="#">RAM</a></li></td>
+  <td>Random Access Memory</td>
+</tr>
+<tr>
+<td><li><a href="#">RDBMS</a></li></td>
+  <td>Relational Database Management System</td>
+</tr>
+<tr>
+<td><li><a href="#">RDF</a></li></td>
+  <td>Resource Description Framework</td>
+</tr>
+<tr>
+<td><li><a href="#">RDRAM</a></li></td>
+  <td>Rambus Dynamic Random Access Memory</td>
+</tr>
+<tr>
+<td><li><a href="#">RFID</a></li></td>
+  <td>Radio-Frequency Identification</td>
+</tr>
+<tr>
+<td><li><a href="#">RIP</a></li></td>
+  <td>Routing Information Protocol</td>
+</tr>
+<tr>
+<td><li><a href="#">RISC</a></li></td>
+  <td>Reduced Instruction Set Computing</td>
+</tr>
+
+<tr>
+<td><li><a href="#">RJ</a></li></td>
+  <td>Registered jack</td>
+</tr>
+<tr>
+<td><li><a href="#">ROM</a></li></td>
+  <td>Read-Only Memory</td>
+</tr>
+<tr>
+<td><li><a href="#">RPC</a></li></td>
+  <td>Remote Procedure Call</td>
+</tr>
+<tr>
+<td><li><a href="#">SAN</a></li></td>
+  <td>Storage Area Network</td>
+</tr>
+<tr>
+<td><li><a href="#">Sass</a></li></td>
+  <td>Synactically Awesome Style Sheets</td>
+</tr>
+
+<tr>
+<td><li><a href="#">SATA</a></li></td>
+  <td>Serial Advanced Technology Attachment</td>
+</tr>
+
+<tr>
+<td><li><a href="#">SCSI</a></li></td>
+  <td>Small Computer System Interface</td>
+</tr>
+
+<tr>
+<td><li><a href="#">SD</a></li></td>
+  <td>Secure Digital</td>
+</tr>
+
+<tr>
+<td><li><a href="#">SDK</a></li></td>
+  <td>Software Development Kit</td>
+</tr>
+
+<tr>
+<td><li><a href="#">SDLC</a></li></td>
+  <td>System Development Lifecycle</td>
+</tr>
+
+<tr>
+<td><li><a href="#">SDRAM</a></li></td>
+  <td>Synchronous Dynamic Random Access Memory</td>
+</tr>
+
+<tr>
+<td><li><a href="#">SDS</a></li></td>
+  <td>Software-Defined Storage</td>
+</tr>
+
+<tr>
+<td><li><a href="#">SDSL</a></li></td>
+  <td>Symmetric Digital Subscriber Line</td>
+</tr>
+
+<tr>
+<td><li><a href="#">SEO</a></li></td>
+  <td>Search Engine Optimization</td>
+</tr>
+
+<tr>
+<td><li><a href="#">SERP</a></li></td>
+  <td>Search Engine Results Page</td>
+</tr>
+
+<tr>
+<td><li><a href="#">SIM Card</a></li></td>
+  <td>Subscriber Identification Module Card</td>
+</tr>
+
+<tr>
+<td><li><a href="#">SIMM</a></li></td>
+  <td>Single in-Line Memory Module</td>
+</tr>
+<tr>
+<td><li><a href="#">SIP</a></li></td>
+  <td>Session Initiation Protocol</td>
+</tr><tr>
+<td><li><a href="#">SLI</a></li></td>
+  <td>Scalable Link Interface</td>
+</tr><tr>
+<td><li><a href="#">SMART</a></li></td>
+  <td>Self-Monitoring Analysis And Reporting Technology</td>
+</tr><tr>
+<td><li><a href="#">SMB</a></li></td>
+  <td>Server Message Block</td>
+</tr><tr>
+<td><li><a href="#">SMM</a></li></td>
+  <td>Social Media Marketing</td>
+</tr><tr>
+<td><li><a href="#">SMS</a></li></td>
+  <td>Short Message Service</td>
+</tr><tr>
+<td><li><a href="#">SMTP</a></li></td>
+  <td>Simple Mail Transfer Protocol</td>
+</tr><tr>
+<td><li><a href="#">SNMP</a></li></td>
+  <td>Simple Network Management Protocol</td>
+</tr><tr>
+<td><li><a href="#">SO-DIMM</a></li></td>
+  <td>Small Outline Dual In-Line Memory Mobile</td>
+</tr><tr>
+<td><li><a href="#">SOA</a></li></td>
+  <td>Service Oriented Architecture</td>
+</tr><tr>
+<td><li><a href="#">SOAP</a></li></td>
+  <td>Simple Object Access Protocol</td>
+</tr><tr>
+<td><li><a href="#">SoC</a></li></td>
+  <td>System on a Chip</td>
+</tr><tr>
+<td><li><a href="#">SPX</a></li></td>
+  <td>Sequenced Packet Exchange</td>
+</tr><tr>
+<td><li><a href="#">SQL</a></li></td>
+  <td>Structured Query Language</td>
+</tr><tr>
+<td><li><a href="#">SRAM</a></li></td>
+  <td>Static Random Access Memory</td>
+</tr><tr>
+<td><li><a href="#">SRE</a></li></td>
+  <td>Site Reliability Engineering</td>
+</tr><tr>
+<td><li><a href="#">SSD</a></li></td>
+  <td>Solid State Drive</td>
+</tr><tr>
+<td><li><a href="#">SSH</a></li></td>
+  <td>Secure Shell</td>
+</tr><tr>
+<td><li><a href="#">SSID</a></li></td>
+  <td>Service Set Identifier</td>
+</tr><tr>
+<td><li><a href="#">SSL</a></li></td>
+  <td>Secure Sockets layer</td>
+</tr><tr>
+<td><li><a href="#">TCP/IP</a></li></td>
+  <td>Transmission Control Protocol/Internet Protocol</td>
+</tr><tr>
+<td><li><a href="#">TFT</a></li></td>
+  <td>Thin-Film Transistor</td>
+</tr><tr>
+<td><li><a href="#">TLS</a></li></td>
+  <td>Transport Layer Security</td>
+</tr><tr>
+<td><li><a href="#">TWAIN</a></li></td>
+  <td>Toolkit Without An Informative Name</td>
+</tr><tr>
+<td><li><a href="#">UAT</a></li></td>
+  <td>User Acceptance Testing</td>
+</tr><tr>
+<td><li><a href="#">UDDI</a></li></td>
+  <td>Universal Description Discovery and Integration</td>
+</tr><tr>
+<td><li><a href="#">UDP</a></li></td>
+  <td>User Datagram Protocol</td>
+</tr><tr>
+<td><li><a href="#">UEFI</a></li></td>
+  <td>Unified Extensible Firmware Interface</td>
+</tr><tr>
+<td><li><a href="#">UGC</a></li></td>
+  <td>User Generated Content</td>
+</tr><tr>
+<td><li><a href="#">UICC</a></li></td>
+  <td>Universal Integrated Circuit Card</td>
+</tr><tr>
+<td><li><a href="#">UML</a></li></td>
+  <td>Unified Modeling</td>
+</tr><tr>
+<td><li><a href="#">UNC</a></li></td>
+  <td>Universal Naming Convention</td>
+</tr><tr>
+<td><li><a href="#">UPnP</a></li></td>
+  <td>Universal Plug and Play</td>
+</tr><tr>
+<td><li><a href="#">UPS</a></li></td>
+  <td>Uninterruptable Power Supply</td>
+</tr><tr>
+<td><li><a href="#">URL</a></li></td>
+  <td>Uniform Resource Locator</td>
+</tr><tr>
+<td><li><a href="#">USB</a></li></td>
+  <td>Universal Serial Bus</td>
+</tr><tr>
+<td><li><a href="#">UTF</a></li></td>
+  <td>Unicode Transformation Format</td>
+</tr><tr>
+<td><li><a href="#">UUID</a></li></td>
+  <td>Universally Unique Identifier</td>
+</tr><tr>
+<td><li><a href="#">UWP</a></li></td>
+  <td>Universal Windows Platform</td>
+</tr><tr>
+<td><li><a href="#">VCI</a></li></td>
+  <td>Virtual Channel Identifier</td>
+</tr>
+<tr>
+<td><li><a href="#">VDSL</a></li></td>
+  <td>Very High Bit Rate Digital Subscriber Line</td>
+</tr><tr>
+<td><li><a href="#">VDU</a></li></td>
+  <td>Visual Display Unit</td>
+</tr>
+
+<tr>
+<td><li><a href="#">VESA</a></li></td>
+  <td>Video Electronics Standard Association</td>
+</tr>
+<tr>
+<td><li><a href="#">VFAT</a></li></td>
+  <td>Virtual File Allocation Table</td>
+</tr><tr>
+<td><li><a href="#">VGA</a></li></td>
+  <td>Video Graphics Array</td>
+</tr><tr>
+<td><li><a href="#">VIP</a></li></td>
+  <td>Virtual IP Address</td>
+</tr><tr>
+<td><li><a href="#">VLAN</a></li></td>
+  <td>Virtual Local Area Network</td>
+</tr><tr>
+<td><li><a href="#">VLE</a></li></td>
+  <td>Virtual Learning Environment</td>
+</tr><tr>
+<td><li><a href="#">VolP</a></li></td>
+  <td>Voice Over internet Protocol</td>
+</tr><tr>
+<td><li><a href="#">VPI</a></li></td>
+  <td>Virtual Path Identifier</td>
+</tr><tr>
+<td><li><a href="#">VPN</a></li></td>
+  <td>Virtual Private Network</td>
+</tr>
+<tr>
+<td><li><a href="#">VPS</a></li></td>
+  <td>Virtual Private Server</td>
+</tr><tr>
+<td><li><a href="#">VRAM</a></li></td>
+  <td>Video Random Access Memory</td>
+</tr><tr>
+<td><li><a href="#">VRML</a></li></td>
+  <td>Virtual Reality Modeling Language</td>
+</tr><tr>
+<td><li><a href="#">W3C</a></li></td>
+  <td>World Wide Web Consortium</td>
+</tr><tr>
+<td><li><a href="#">WAIS</a></li></td>
+  <td>Wide Area Information Server</td>
+</tr><tr>
+<td><li><a href="#">WAMP</a></li></td>
+  <td>Windows,Apache,MySQL,and PHP</td>
+</tr><tr>
+<td><li><a href="#">WAN</a></li></td>
+  <td>Wide Area Network</td>
+</tr><tr>
+<td><li><a href="#">WDDM</a></li></td>
+  <td>Windows Display Driver Model</td>
+</tr><tr>
+<td><li><a href="#">WEP</a></li></td>
+  <td>Wired Equivalent Privacy</td>
+</tr><tr>
+<td><li><a href="#">WIMP</a></li></td>
+  <td>Windows,Icons,Menus,Pointer</td>
+</tr><tr>
+<td><li><a href="#">WINS</a></li></td>
+  <td>Windows Internet Name Service</td>
+</tr><tr>
+<td><li><a href="#">WLAN</a></li></td>
+  <td>Wireless Local Area Network</td>
+</tr><tr>
+<td><li><a href="#">WPA</a></li></td>
+  <td>Wi-Fi Protected Access</td>
+</tr><tr>
+<td><li><a href="#">WPA2</a></li></td>
+  <td>Wi-Fi Protected Access 2</td>
+</tr><tr>
+<td><li><a href="#">WWW</a></li></td>
+  <td>World Wide Web</td>
+</tr><tr>
+<td><li><a href="#">WYSIWYG</a></li></td>
+  <td>What You See Is What You Get</td>
+</tr>
+<tr>
+<td><li><a href="#">XAML</a></li></td>
+  <td>Extensible Application Markup language</td>
+</tr>
+<tr>
+<td><li><a href="#">XHTML</a></li></td>
+  <td>Extensible Hypertext Markup Language</td>
+</tr>
+
+<tr>
+<td><li><a href="#">XML</a></li></td>
+  <td>Extensible markup Language</td>
+</tr>
+
+<tr>
+<td><li><a href="#">XMP</a></li></td>
+  <td>Extensible Metadata Platform</td>
+</tr>
+
+<tr>
+<td><li><a href="#">XSLT</a></li></td>
+  <td>Extensible Style Sheet language Transformation</td>
+</tr>
+
+<tr>
+<td><li><a href="#">Y2K</a></li></td>
+  <td>Year 2000</td>
+</tr>
+
+<tr>
+<td><li><a href="#">ZIF</a></li></td>
+  <td>Zero Insertion Force</td>
+</tr>
+
+
+</table></ul>
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+<article class="all-browsers">
+   <h1>Most Popular Browers</h1>
+   <article class="browser">
+    <h2>Google Chrome</h2>
+    <p>Google chrome is web browser developed by Google, released in 2008.</p>
+ </article>
+ <article class="browser">
+   <h2>Microsoft edge</h2>
+   <p>Microsoft Edge is a web browser developed by Microsoft,released in 2013.</p>
+ </article>
+<article class="browser">
+  <h2><i>About Us</i></h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam</p>
+</article>
+
+<footer>
+  <p>Asvan-launcher<br>
+    <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\Asvan launcher.html"></a></p>
+</footer>
+<article class="browser">
+  <div class="container">
+          <label for="uname">
+          </label>
+          <input type="text"
+          placeholder="Enter Email" name="uname" required>
+        </div>
+</article>
+</article>
+
+<footer class="weg">
+  <a href="#" class="fa fa-facebook-official"></a>
+  <a href="#" class="fa fa-pinterest-p"></a>
+  <a href="#" class="fa fa-twitter"></a>
+  <a href="#" class="fa fa-flickr"></a>
+  <a href="#" class="fa fa-linkedin"></a>
+  <a href="#" class="fa fa-whatsapp"></a>
+  <h3 class="w3-medium">
+  Powered by <a href="www.asvan.com" target="_blank">Asvan</a>
+  </h3>
+  <p>Copyright @2021 All rights reserved |
+  This template is made by Amzi Group Of Company.</p>
+</footer> 
+</body>
+</body>
+</html>

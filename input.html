@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<style>
+  .fa{
+    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 3px 1px;
+    border-radius: 50%;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-twitter{
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-linkedin{
+    background: #007bb5;
+    color: white;
+  }
+  .fa-whatsapp{
+     background: green;
+     color: white;
+  }
+  .fa-pinterest-p{
+    background: #cb2027;
+    color: white;
+  }
+  .fa-flickr{
+    background: blue;
+    color: white;
+  }
+  .weg {
+    background-color: black;
+    color: white;
+  }
+</style>
+
+ 
+  <style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial,Helvetica,sans-serif;
+  }
+  .topnav{
+    overflow: hidden;
+    background-color: blueviolet;
+  }
+  .topnav a{
+    float: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav a.active {
+    background-color: blueviolet;;
+    color: white;
+  }
+  
+  .http {
+  position: absolute;
+  color: white;
+  top: -10px;
+  right: 45px;
+  font-size: 30px;
+}
+</style>
+
+
+<style>
+  .all-browsers {
+    margin: 0;
+    padding: 5px;
+    background-color: grey;
+  }
+
+  .all-browsers > h1, .browser{
+    margin: 10px;
+    padding: 5px;
+    color: black;
+  }
+
+  .browser{
+    background: white;
+  }
+
+  .browser > h2, p{
+    margin: 4px;
+    font-size: 90%;
+  }
+  footer {
+    text-align: center;
+    padding: 3px;
+    background-color: blueviolet;
+    color: white;
+  }
+  
+</style>
+
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0,0,0, 0.9);
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: left;
+  margin-top: 0px;
+  top: 80px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: grey;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  color: white;
+  top: 0px;
+  right: 45px;
+  font-size: 30px;
+}
+
+.trong {
+  text-align: left;
+  padding: 14px 16px;
+  background-color: indigo;
+  font-size: 20px;
+  color: white;
+}
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+</style>
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+<style>
+  #snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation:fadein 0.5s,
+    fadeout 0.5s 2.5s;
+    animation: fadein 0.5s,fadeout;
+    0.5s 2.5s;
+  }
+
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to{bottom: 30px; opacity: 1;}
+  }
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}   
+  }
+</style>
+
+<style>
+  body {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 20px;
+  }
+  #myBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50px;
+  }
+  #myBtn: hover {
+    background-color: grey;
+  }
+</style>
+
+</head>
+<body>
+  <div class="topnav">
+    <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\api.html" title=" Back to Courses"><i class="fa fa-arrow-left"></i></a>
+    <a class="active">Input and Output Dev</a>
+    <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\Asvan launcher.html" title="Home"><i class="fa fa-home"></i></a>
+    <a href="#" title="Refresh" class="risk"><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i></a>
+    <a href="#" title="More" class="http"><i class="fa fa fa-ellipsis-v"></i></a>
+    </div>
+  </div>
+
+
+  <div id="myNav" class="overlay">
+    <footer class="trong"><i>ASV Launcher</i></footer>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+      <ul><a href="C:\Users\dorby-launch\Desktop\PROJECT\html\Asvan launcher.html"><i class="fa fa-home"></i>Home</a>
+   <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\api.html"><i class="fa fa-laptop"></i>Courses</a>
+   <a href="#"><i class="fa fa-exclamation-circle"></i>About</a>
+   <hr> 
+    <a href="#" ><i class="fa fa-cog fa-spin fa-3x fa-fw"></i>Settings</a>
+</ul>
+  </div></div>
+</div>
+
+<button onclick="topFunction()"
+  id="myBtn" title="Go to top"><i class="fa fa-chevron-up"></i></button>
+<script>
+  //Get the button
+  var mybutton=
+  document.getElementById('myBtn');
+
+  //When the user scrolls down 20px from the top of the document,show the button
+  window.onscroll=function()
+  {scrollFunction()};
+  function scrollFunction(){
+    if (document.body.scrollTop >
+      20||
+      document.documentElement.scrollTop >
+      20){
+      mybutton.style.display="block";
+    } else{
+      mybutton.style.display="none";
+    }
+  }
+  
+  // When the user clicks on the button,scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop=0;
+    document.documentElement.scrollTop=0;
+  }
+</script>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "50%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/laptop.jpg" style="width:100%;">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/lapy.png" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/nurse.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<div class="text">Caption Three</div>
+</div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+
+ <h2 style="text-align: center;">Input Devices</h2>
+ <p>An input device is one that transfers information from outside the computer system to an internal storage location,such as system RAM,video RAM,flash memory, or disk storage. Without output devices,computer would be unable to change from their defaut boot-up state. The following input device are covered in the subsequent sections:</p>
+ <p>&nbsp;i. Mouse</p>
+ <p>&nbsp;ii.Keyboard</p>
+ <p>&nbsp;iii.Scanner</p> 
+ <p>&nbsp;iv.Barcode reader</p>
+ <p>&nbsp;v.Digitizer</p> 
+ <p>&nbsp;vi. Biometric devices</p>
+ <p>&nbsp;vii.Joysticks and Gamepads</p>
+ <p>&nbsp;viii.Motion sensors</p>
+ <p>&nbsp;ix.Smart card reader</p>
+ <p>&nbsp;x.Multimedia devices</p>     
+
+              <h3>Mouse</h3>
+         <p>A mouse is a hand-fitting device that uses some form of motion-detection mechanism to translate its own physical two-dimensional movement into onscreen cursor motion. The computer mouse was born in 1970s at Xero's Palo Alto Research Center (PARC).Many variations of the mouse exit,including trackballs,tablets,touchpads,and pointing sticks. A mouse pad is a special surface that improves mechanical mouse traction while offering very little resistance to the mouse itself. The mouse today can be wired to the computer system or wirelessly. The wireless mouse uses batteries to power itself,and the optical varieties deplete these batteries more quickly than their mechanical counterparts.</p><img src="#">
+         
+  <h3>Touchpad</h3>
+  <p>Many modern laptops have built-in pointing device that can take the place of a mouse.<i style="color:red;">Touchpads are flat panels,</i>which are most often positioned in the same plane as the keyboard--between the spacebar and the user -- sometimes with buttons that supply right-clicks of the mouse. The user controls the onscreen pointer by tracing its path on the surface of the touchpad,some of which include a tactile click feature that takes the place of the left-button click.</p>  
+
+  <h3>Keyboard</h3>
+  <p>A computer keyboard is a peripheral input device modeled after the typewriter keyboard which uses an arrangement of buttons or keys to act as mechanical levers or elctronic switches. In normal usage, a keyboard is used as a text entity interface for typing text,numbers,and symbols into application software such as word processor,web browser etc. Technically speaking,the keys on a keyboard complete individual circuits when each one is pressed. The computer uses a keyboard controller chip or function to interpret the code as the corresponding key sequence. The computer then decides what action to take based on the key sequence and what it means to the computer and the active application,including simply displaying the characters printed on the key.</p><img src="#">
+
+  <h3>Scanner</h3>
+  <p>Scanners use light to reflect off of a surface and measure the relative reflections of the different dots that makes up the grid that the scanner is able to detect.The tighter the grid (the more dots per inch [DPI] supported), the higher the resolution of the resulting image. Charge Coupled Devices(CCDs) are a common choice in today's scanners. CCDs convert the light they receive into electrical impulses,which is then forwarded to the software producing the scan for further processing into an image that is a facsimile of the original object being scanned.</p><img src="#">
+
+  <h3>Barcode Reader</h3>
+  <p>A <i style="color:chocolate;">barcode reader</i> (barcode scanner) is a specialised input device commonly used in retail and other industrial sectors that mange inventory. Barcode readers can use LEDs or lasers as light source and can scan one or two-dimensional barcodes. With today's smartphone tech being what it is, the built-in cameras can act as scanners, and the scanning app can interpret what the camera sees. A QR code is an encoded image that allows the scanning application to decode large amounts of text, and it can be used to represent simple text or popular strings,such as a website's URL,a phone number,a GEO location,an email address,or an SMS message.</p> <img src="#"> 
+
+  <h3>Digitizer</h3>
+  <p>One way to reproduce incredibly good artwork faithfully in digital form for computer use is to place the analog artwork on top of a sensor and use a stylus to trace the artwork after choosing an onscreen "crayon" or "pen". The end result can be a work of art almost as good as the original. The device used to trace an analog source and turn it into aa digital representation is a <i style="color: green;">digitizer</i>. As an input device,however, a digitizer or digitizing tablet takes pen strokes in the analog world and turns them into a digital rendering through the software controlling the digitizer. These device are also commonly used to annotate presentations with the option to save or discard the annotations with each presentation.</p><img src="#"> 
+
+<h3>Biometric Devices</h3> 
+<p>Any device that measures one or more physical or behavioral features of an organism is considered as a <i style="color:blueviolet;">biometric device</i>, or literally, a device that measures life.</p>        
+        <h3>Joysticks & Gamepads</h3>
+    <p></p>    
+<script>
+  function myFunction() {
+    var x =
+    document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){
+      x.className =
+      x.className.replace("show", "");
+      }, 3000);
+      }
+</script>
+<article class="all-browsers">
+   <h1>Most Popular Browers</h1>
+   <article class="browser">
+    <h2>Google Chrome</h2>
+    <p>Google chrome is web browser developed by Google, released in 2008.</p>
+ </article>
+ <article class="browser">
+   <h2>Microsoft edge</h2>
+   <p>Microsoft Edge is a web browser developed by Microsoft,released in 2013.</p>
+ </article>
+<article class="browser">
+  <h2><i>About Us</i></h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.We also sell artworks of your kind, painting of houses and many more.</p>
+  <i>Call us on:</i><a href="#">0549271528</a>
+</article>
+
+<footer>
+  <p>Asvan-launcher<br>
+    <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\Asvan launcher.html"></a></p>
+</footer>
+<article class="browser">
+  <div class="container">
+          <label for="uname">
+          </label>
+          <input type="text"
+          placeholder="Enter Email" name="uname" required>
+        </div>
+</article>
+</article>
+
+<footer class="weg">
+  <a href="#" class="fa fa-facebook-official"></a>
+  <a href="#" class="fa fa-pinterest-p"></a>
+  <a href="#" class="fa fa-twitter"></a>
+  <a href="#" class="fa fa-flickr"></a>
+  <a href="#" class="fa fa-linkedin"></a>
+  <a href="#" class="fa fa-whatsapp"></a>
+  <h3 class="w3-medium">
+  Powered by <a href="www.asvan.com" target="_blank">Asvan</a>
+  </h3>
+  <p>Copyright @2021 All rights reserved |
+  This template is made by Amzi Group Of Company.</p>
+
+  <button 
+onclick="myFunction()" title="Thumbs up for the site"><i class="fa fa-thumbs-up"></i></button>
+<div id="snackbar">Thanks for visiting our site...</div>
+
+</footer>
+
+
+</body>
+</html>

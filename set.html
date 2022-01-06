@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <style>
+  .fa{
+    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 3px 1px;
+    
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-twitter{
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-linkedin{
+    background: #007bb5;
+    color: white;
+  }
+  .fa-whatsapp{
+     background: green;
+     color: white;
+  }
+  .fa-pinterest-p{
+    background: #cb2027;
+    color: white;
+  }
+  .fa-flickr{
+    background: blue;
+    color: white;
+  }
+  .weg {
+    background-color: black;
+    color: white;
+  }
+</style>
+
+	<style>
+body {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.tye{
+  background-color: white;
+  color: black;
+  padding: 0px;
+  width: 10%;
+  text-align: left;
+ }
+ .tye:hover, .tye:focus{
+  color: blue;
+ }
+</style>
+	
+<style>
+  .all-browsers {
+    margin: 0;
+    padding: 5px;
+    background-color: grey;
+  }
+
+  .all-browsers > h1, .browser{
+    margin: 10px;
+    padding: 5px;
+    color: black;
+  }
+
+  .browser{
+    background: white;
+  }
+
+  .browser > h2, p{
+    margin: 4px;
+    font-size: 90%;
+  }
+  footer {
+    text-align: center;
+    padding: 3px;
+    background-color: blueviolet;
+    color: white;
+  }
+  .footer{
+    padding: 8px;
+    background-color: grey;
+    color: black;
+  }
+</style>
+
+
+</style>
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0,0,0, 0.9);
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: left;
+  margin-top: 0px;
+  top: 80px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: grey;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  color: white;
+  top: 0px;
+  right: 45px;
+  font-size: 30px;
+}
+
+.trong {
+  text-align: left;
+  padding: 14px 16px;
+  background-color: indigo;
+  color: whitesmoke;
+}
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+</style>
+
+<style>
+  body {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 20px;
+  }
+  #myBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 60%;
+  }
+  #myBtn: hover {
+    background-color: #555;
+  }
+</style>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial,Helvetica,sans-serif;
+  }
+  .topnav{
+    overflow: hidden;
+    background-color: blueviolet;
+  }
+  .topnav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav a.active {
+    background-color: blueviolet;;
+    color: white;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="topnav">
+    <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\api.html" title=" Back to Courses"><i class="fa fa-arrow-left"></i></a>
+    <a class="active"> Expansion Cards.</a>
+    <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\Asvan launcher.html"><i class="fa fa-home" title="Home"></i></a>
+    <a href="#" title="Refresh" class="risk"><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i></a>
+    <a href="#" title="More"><i class="fa fa fa-ellipsis-v"></i></a>
+    </div>
+  
+
+
+ <div id="myNav" class="overlay">
+  <footer class="trong">ASV Launcher</footer>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <ul><a href="C:\Users\dorby-launch\Desktop\PROJECT\html\Asvan launcher.html"><i class="fa fa-home"></i>Home</a>
+   <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\api.html"><i class="fa fa-laptop"></i>Courses</a>
+   <a href="#"><i class="fa fa-exclamation-circle"></i>About</a> 
+   <hr>
+    <a href="#" ><i class="fa fa-cog fa-spin fa-3x fa-fw"></i>Settings</a>
+   <button onclick="myFunction()"
+style="width:auto;" class="tye">Dark/Light mode</button>
+ 
+</ul>
+  </div>
+</div>
+
+<button onclick="topFunction()"
+  id="myBtn" title="Go to top"><i class="fa fa-chevron-up"></i></button>
+<script>
+  //Get the button
+  var mybutton=
+  document.getElementById('myBtn');
+
+  //When the user scrolls down 20px from the top of the document,show the button
+  window.onscroll=function()
+  {scrollFunction()};
+  function scrollFunction(){
+    if (document.body.scrollTop >
+      20||
+      document.documentElement.scrollTop >
+      20){
+      mybutton.style.display="block";
+    } else{
+      mybutton.style.display="none";
+    }
+  }
+  
+  // When the user clicks on the button,scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop=0;
+    document.documentElement.scrollTop=0;
+  }
+</script>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<script>
+
+function openNav() {
+  document.getElementById("myNav").style.width = "50%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+  
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+</script>
+
+
+<h2 style="text-align: center;">Installing and Configuring Expansion Cards</h2>
+<p>An expansion card is also known as an (adapter card) is simply a circuit board that you install into a copmuter to increase the capabilities of that computer. Expansion cards comes in varrying formats for different uses, but the important to note is that no matter what function a card has, the card being installed must match the bus type of the motherboard into which is being installed.</p>
+<p>The following are the four most common categories of expansion cards installled today:</p>
+<i class="fa fa-asterisk">Video</i><br><i class="fa fa-asterisk">Multimedia</i><br>
+<i class="fa fa-asterisk">I/O</i><br>
+<i class="fa fa-asterisk">Communications</i>
+<h4>Video</h3>
+<p>A video adpter (more commonly called a graphics adpter or even more commonly a video card) is the expansion card that you put into a computer to allow the computer to display info on some kind of monitor. It is responsible for converting the data sent to it by the CPU into the pixels,addreses and other items required for display. </p>
+<img src="#"><i>A video expansion card</i>
+<h4>Multimedia</h4>
+<p>The basic and prolific multimedia adapter is the sound card. TV tuner cards and video capture cards are the newer multimedia adapters that continue to gain in popularity due to decreasing cost and the rise of the internet as a forum for creative sharing.</p>
+<h4>Sound card</h4>
+<p>There are devices that convert signals into sound. These devices are known as <i>sound cards</i>. Although sound cards started out as pluggable adapters, this functionality is one of the most common integrated tech found on motherboards today. A sound card typically has small,round,1/8" jacks on the back of it for connecting microphones,headset/headphones, and speakers as well as other sound equipment.</p><img src="#">
+<h4>TV Tuner Cards and Video Capture Cards</h4>
+<p>The TV <i>tunner cards</i> is a class of internal and external devices that allows you to connect a broadcast signal, such as home cable television, to your computer and display the output on the computer monitor.TV tuner cards comes in analog,digital, and hybrid varieties. Most tv tuner cards act as video capture cards. The TV tuner and video capture cards need and often come with software to aid in the processing of multimedia input.</p>
+ 
+<h4>I/O</h4>
+<p>I/O is often used as a catchall phrase for any expansion card that enhances the system,a llowing it to interface with devices that offer input to the system,output from the system,or both. The following are common examples of modern I/O cards:</p>
+<i>1.USB cards</i><br>
+<i>2. FireWire cards</i><br>
+<i>3.Thunderbolt cards</i><br>
+<i>4.Storage cards, such as eSATA</i>
+<p>&nbsp;These cards are to be installed in a compatible slot on the motherboard. Their configuration is minimal,and it is usually completed through the Plug and Play process.A new Thunderbolt expansion card might allow you to configure whether attached Thunderbolt devices should be allowed to wake the system,how long of a delay should be observed before waking the system,and various settings for how to use memory and other resources.</p>
+<h4>Communications</h4>
+<p>Communications adapters give a computer the ability to transmit info to other devices that might be too distant to cable up to directly. Network adpters and modems are the two popular types of communications adapters.In contrast, modems allow direct domestic or international communications between two devices across the Public Switched Telephone Network (PSTN).</p> 
+<h4>Network Interface Card (NIC)</h4>
+<p>A network interface card is an expansion card that connects a computer to a network so that it can communicate with other computers on that network. NIC can also stand for <i style="color:blue;">network interface controller.</i>It translates the data from the parallel data stream used inside the computer into the serial data stream that makes up the frames used on the network. If you have a system with either no  or too few Ethernet interfaces,it's easy to fdind a USB-to-Ethernet adapter thet uses an existing USB port to gain accesss to the energy needed to power the circuitry at the heart of the adapter's Ethernet interface. The USB port is also used as the commmunication pathway for the now-powered Ethernet interface to transmit and receive across a standard Ethernet network.</p><img src="#">
+<p>Another type of USB-to-Ethernet converter on the market is a device that produces the opposite effect and uses an Ethrenet network to extend the range of USB ports and devices,which are unable to extend beyond a few meters on their own.Other vendors create client-server platforms,such as USB over Networks, to create an environment that supports USB access over the network.</p>
+<h4>Modem</h4>
+<p>Any computer that connects to the Internet using an analog dial-up connection needs a modem, or <i>modulator/demodulator(MODEM).</i>A <a href="#">modem</a>is a device that converts digital signals from a computer into analog signals that can be transmitted over phone lines and back again.These expansion card devices have one connector for the expansion bus being used (PCIe,PCI, and so on) and another for connection to the telephone line.</p>
+<img src="#">
+<h2 style="text-align:center">Identifying Charcteristics of Connectors and Cables</h2>
+<p>there are various types of ports and cables used with computers. <a style="color: blueviolet;">A port is a generic name for any connector on a computer or peripheral into which a cable can be plugged.</a><i style="color:red">A cable is simply a way of connecting a peripheral or other device to a computer using multiple copper or fiber-optic conductors inside a common wrapping or sheath.</i>Typically, cables connect two ports: one on the computer and one on some other devices.</p>
+<h3>Other Types of Ports</h3>
+<p>there are several/many other types of ports that are used with computers today, including these:</p>
+<i>a. Universal Serial Bus (USB)</i><br>
+<i>b.IEEE 1394(FireWire)</i><br>
+<i>c.Infrared</i><br>
+<i>d.Audio and video jacks</i><br>
+<i>e.PS/2 (6-pin min-DIN)</i>
+<h4>Universal Serial Bus (USB)</h4>
+<p>Usb are used for connecting multiple (up to 127) peripherals to one computer through a single port (and the use of multiport peripheral hubs).Usb has a higher tranfer rate.</p><img src="#">
+<p>Because of USB's higher transfer rate,flexibility, and ease of use,most devices now come standard with USB interfaces.</p>
+<h4>IEEE 1394(FireWire)</h4>
+<p>While not as prevalent as USB ports,one other port has crept into the mainstream and is included as a standard attachment in small numbers,often only one, on motherboards and laptops.That port is the IEEE 1394(FireWire)ports.It's popularity is due to its ease of use,isochronous (synchronized clock) mode,and very high (400Mps to 3.2Gbps and higher)transmission rates. It is often used as a way to get digital video into a PC so that it can be edited with digital video editing tools.</p><img src="#">
+<h4>Infrared</h4>
+<p>Many years ago,increasing numbers of people became fed up with being tethered to their computers by cords. As a result, many computers (especially portable computing devices like laptops and PDAs) hit the market with infrared ports to send and receive data. Modern computers use radio frequency(RF) tech,such as bluetooth and WiFi,to accomplish the same and more. An infrared port is a small port on the computer that allows data to be sent and received using electromagnetic radiation in the infrared band.</p><img src="#">
+<h4>Audio/Video Jacks</h4>
+<p>The RCA jack was developed by the RCA Victor Company in the late 1940's. They are used to transmit both audio and video info.Typically,when you see a yellow-coded RCA connector on a PC video card,it's for composite video output(output to a television or VCR)</p><img src="#">
+<h4>PS/2(keyboard and mouse)</h4>
+<p>A PS/2 port (also known as a mini-DIN 6 connector) is a mouse and keyboard interface port first found on the IBM PS/2. It is smaller than previous interfaces (DIN 5 keyboard port and serial mouse connector),and thus its popularity increased quickly. The keyboard port is usually <i style="color:purple;">purple</i>and the mouse port is usually <i style="color:green">green</i>.</p><img src="#">
+<article class="all-browsers">
+   <h1>Most Popular Browers</h1>
+   <article class="browser">
+    <h2>Google Chrome</h2>
+    <p>Google chrome is web browser developed by Google, released in 2008.</p>
+ </article>
+ <article class="browser">
+   <h2>Microsoft edge</h2>
+   <p>Microsoft Edge is a web browser developed by Microsoft,released in 2013.</p>
+ </article>
+<article class="browser">
+  <h2><i>About Us</i></h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam</p>
+</article>
+
+<footer>
+  <p>Asvan-launcher<br>
+    <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\Asvan launcher.html"></a></p>
+</footer>
+<article class="browser">
+  <div class="container">
+          <label for="uname">
+          </label>
+          <input type="text"
+          placeholder="Enter Email" name="uname" required>
+        </div>
+</article>
+</article>
+
+<footer class="weg">
+  <a href="#" class="fa fa-facebook-official"></a>
+  <a href="#" class="fa fa-pinterest-p"></a>
+  <a href="#" class="fa fa-twitter"></a>
+  <a href="#" class="fa fa-flickr"></a>
+  <a href="#" class="fa fa-linkedin"></a>
+  <a href="#" class="fa fa-whatsapp"></a>
+  <h3 class="w3-medium">
+  Powered by <a href="www.asvan.com" target="_blank">Asvan</a>
+  </h3>
+  <p>Copyright @2021 All rights reserved |
+  This template is made by Amzi Group Of Company & IPMC.</p>
+</footer> 
+</body>
+</body>
+</html>

@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+body {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+</style>
+
+
+<style>
+ 	body {font-family: Arial,;}
+ 	Helvetica,  sans-serif;}
+
+ 	/*Full-width input fields */
+ 	input [type=text],
+ 	input[type-password] {
+ 		width: 100%;
+ 		padding: 12px 20px;
+ 		margin: 8px 0;
+ 		display: inline-block;
+ 		border: 1px solid #ccc;
+ 		box-sizing: border-box;
+ 	}
+
+ 	 /* Set a style for all buttons */
+ 	 button {
+ 	 	background-color: #04AA6D;
+ 	 	color: white;
+ 	 	padding: 14px 20px;
+ 	 	margin: 8px 0;
+ 	 	border: none;
+ 	 	width: 100%;
+ 	 }
+ 	  button:hover {
+ 	  	opacity: 0.8;
+ 	  }
+ 	  /* Extra style for the cancel button*/
+ 	  .cancelbtn{
+ 	  	width: auto;
+ 	  	padding: 10px 18px;
+ 	  	background-color: #f44336;
+ 	  }
+ 	  /* Center the image and position the close button */
+ 	  .imgcontainer {
+ 	  	text-align: center;
+ 	  	margin: 24px 0 12px 0;
+ 	  	position: relative; 
+ 	  }
+ 	  img.avatar{
+ 	  	width: 40%;
+ 	  	border-radius: 50%;
+ 	  }
+ 	  .container {
+ 	  	padding: 16px;
+ 	  }
+ 	  span.psw {
+ 	  	float: right;
+ 	  	padding-top:16px;
+ 	  }
+ 	  /* The Modal(background)*/
+ 	  .modal {
+ 	  	display: none; /* Stay in place*/
+ 	  	z-index: 1;/*Sit on top */
+ 	  	left: 0;
+ 	  	top: 0;
+ 	  	width: 100%;/*Full width */
+ 	  	height: 100%;/*Full height*/
+ 	  	overflow: auto;/*Enable scroll if needed*/
+ 	  	background-color: rgb(0,0,0);
+ 	  	/*Fallback color*/
+ 	  	background-color: rgba(0, 0, 0, 0.4);/* Black w/
+ 	  	opacity */
+ 	  	padding-top: 60px;
+ 	  }
+ 	  /*Modal Content/Box */
+ 	  .modal-content {
+ 	  	background-color: #fefefe;
+ 	  	margin: 5% auto 15% auto;/*5% from the top,15% from the bottom and centered */
+ 	  	border: 1px solid #888;
+ 	  	width: 80%;/*Could be more or less,depending on screen size */
+ 	  }
+ 	  /* The Close Button (x)*/
+ 	  .close {
+ 	  	position: absolute;
+ 	  	right: 25px;
+ 	  	top: 0;
+ 	  	color: #000;
+ 	  	font-size: 35px;
+ 	  	font-weight: bold;
+ 	  }
+ 	  .close:hover,
+ 	  .close:focus {color: red;
+ 	  	cursor: pointer;}
+ 	  	/* Add Zoom Animation*/
+ 	  	.animate {
+ 	  		-webkit-animation: animatezoom;
+ 	  		0.6s;
+ 	  		animation: animatezoom 0.6s;
+ 	  	}
+ 	  	@-webkit-keyframes animatezoom {
+ 	  		from {-webkit-transform: scale(0)}
+ 	  	to {-webkit-transform: scale(1)}	
+ 	  	}
+ 	  	@keyframes animatezoom {
+ 	  		from{transform: scale(0);}
+ 	  		to {transform: scale(1);}
+ 	  	}
+ 	  	/*Change styles for span and cancel button on extra small screens */
+ 	  	@media screen and (max-width: 300px) {
+ 	  		span.psw {
+ 	  			display: block;
+ 	  			float: none;
+ 	  		}
+ 	  		.cancelbtn {
+ 	  			width: 100%;
+ 	  		}
+ 	  	}
+
+ </style>
+
+ 
+</style>
+<style>
+ 	/*The Overlay(background)*/
+ 	.overlay {
+ 		/*Height & width depends on how you want to reveal the overlay(see Js below)*/
+ 		height: 100%;
+ 		width: 0;
+ 		position: fixed;/*Stay in place*/
+ 		z-index: 1;/*Sit on top*/
+ 		left: 0;
+ 		top: 0;
+ 		background-color: rgb(0, 0, 0);/*Black fallback color*/
+ 		background-color: rgb(0, 0, 0,0.9);/* Black w/opacity*/
+ 		overflow-x: hidden;/*Disable horizontal scroll*/
+ 		transition:0.5s;/*0.5 second transition  effect to slide in or slide down the overlay(height or width,depending on reveal)*/ 
+ 	}
+ 	/* Position the content inside the overlay*/
+ 	.overlay-content{
+ 		position: relative;
+ 		top: 25%;/*25% from the top*/
+ 		width: 100%;/*100% width */
+ 		text-align: center;/*
+ 		Centered text/links*/
+ 		margin-top: 30px;/*30px top margin to avoid conflict with the close button on smaller screens*/
+ 	}
+ 	/*The navigation links inside the overlay */
+ 	.overlay a{
+ 		padding: 8px;
+ 		text-decoration: none;
+ 		font-size: 36px;
+ 		color: #818181;
+ 		display: block;/* Display block instead of inline*/
+ 		transition: 0.3s;/*Transition effects on hover(color)*/
+ 	}
+ 	/*When you mouse over the navigation links,change their color*/
+ 	.overlay a:hover,.overlay a:focus{
+ 		color: #f1f1f1;
+ 	}
+ 	/*Position the close button(top right corner)*/
+ 	.overlay.closebtn{
+ 		position: absolute;
+ 		top: 20px;
+ 		right: 45px;
+ 		font-size: 60px;
+ 	}
+ 	/*When the height of the screen is less than 450 pixels,change the font-size of the links and position the close button again,so they dont overlap*/
+ 	@media screen and (max-height: 450px){
+ 		.overlay a {font-size: 20px;}
+ 		.overlay.closebtn{
+ 			font-size: 40px;
+ 			top: 15px;
+ 			right: 35px;
+ 		}
+ 	}
+ </style>
+ <style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position:fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: left;
+  margin-top: 0px;
+  top: 80px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: grey;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 40px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+</style>
+
+ <style>
+  .all-browsers {
+    margin: 0;
+    padding: 5px;
+    background-color: grey;
+  }
+
+  .all-browsers > h1, .browser{
+    margin: 10px;
+    padding: 5px;
+    color: black;
+  }
+
+  .browser{
+    background: white;
+  }
+
+  .browser > h2, p{
+    margin: 4px;
+    font-size: 90%;
+  }
+  footer {
+    text-align: center;
+    padding: 3px;
+    background-color: blueviolet;
+    color: white;
+  }
+  
+</style>
+<style>
+  .fa{
+    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 3px 1px;
+    border-radius: 50%;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-twitter{
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-linkedin{
+    background: #007bb5;
+    color: white;
+  }
+  .fa-whatsapp{
+     background: green;
+     color: white;
+  }
+  .fa-pinterest-p{
+    background: #cb2027;
+    color: white;
+  }
+  .fa-flickr{
+    background: blue;
+    color: white;
+  }
+  .weg {
+    background-color: black;
+    color: white;
+  }
+</style>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial,Helvetica,sans-serif;
+  }
+  .topnav{
+    overflow: hidden;
+    background-color: blueviolet;
+  }
+  .topnav a{
+    float: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav a.active {
+    background-color: blueviolet;;
+    color: white;
+  }
+  
+</style>
+<style>
+  body {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 20px;
+  }
+  #myBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50px;
+  }
+  #myBtn: hover {
+    background-color: grey;
+  }
+</style>
+</head>
+<body>
+ <div class="topnav">
+    <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\api.html" title=" Back to Courses"><i class="fa fa-arrow-left"></i></a>
+    <a class="active">Tools and Equipment</a>
+    <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\Asvan launcher.html" title="Home"><i class="fa fa-home"></i></a>
+    <a href="#" title="Refresh" class="risk"><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i></a>
+    <a href="#" title="More"><i class="fa fa fa-ellipsis-v"></i></a>
+    </div>
+  </div>
+	
+   <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    
+      <ul><a href="C:\Users\dorby-launch\Desktop\PROJECT\html\Asvan launcher.html"><i class="fa fa-home"></i>Home</a>
+   <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\api.html"><i class="fa fa-laptop"></i>Courses</a>
+   <a href="#"><i class="fa fa-exclamation-circle"></i>About</a> 
+   <hr>
+    <a href="#" ><i class="fa fa-cog fa-spin fa-3x fa-fw"></i>Settings</a>
+</ul>
+  </div></div>
+</div>
+
+<button onclick="topFunction()"
+  id="myBtn" title="Go to top" style="width:60px;"><i class="fa fa-chevron-up"></i></button>
+<script>
+  //Get the button
+  var mybutton=
+  document.getElementById('myBtn');
+
+  //When the user scrolls down 20px from the top of the document,show the button
+  window.onscroll=function()
+  {scrollFunction()};
+  function scrollFunction(){
+    if (document.body.scrollTop >
+      20||
+      document.documentElement.scrollTop >
+      20){
+      mybutton.style.display="block";
+    } else{
+      mybutton.style.display="none";
+    }
+  }
+  
+  // When the user clicks on the button,scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop=0;
+    document.documentElement.scrollTop=0;
+  }
+</script>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "40%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+	<button 
+	onclick="document.getElementById('id01').style.display='block'"
+	style="width:auto;">Login</button>
+
+	<div id="id01" class="modal">
+		<form class="modal-content animate"
+		action="/action_page.php"
+		method="post">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById(
+				'id01').style.display='none'"
+				class="close"title="Close Modal">&times;</span>
+				<img src="///C:/Users/dorby-launch/Desktop/PROJECT/image/avatar.jpg" alt="avatar" class="love"></div>
+				<div class="container">
+					<label for="uname">
+						<b>Username</b>
+					</label>
+					<input type="text"
+					placeholder="Enter Username" name="uname" required>
+					<label for="psw">
+						<b>Password</b>
+					</label>
+					<input type="password"
+					placeholder="Enter Password" name="psw" required>
+			<button
+			type="submit">Login</button>
+			<label>
+				<input type="checkbox"
+			checked="checked"
+			name="remember">Remember me
+			</label>		
+				</div>
+				<div class="container"
+				style="background-color: #f1f1f1;">
+				<button type="button"
+				onclick="document.getElementById('id01').style.display='none'"
+				class="cancelbtn">Cancel</button>
+				<span class="psw">Forget<a href="#">password?</a></span>
+			</div>
+		</form>
+	</div>
+   <button onclick="myFunction()"
+style="width:auto;">Toggle dark mode</button>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+  
+	<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/pliers.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/laptop.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/tools.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+<section class="w3-container w3-
+center w3-content" style=max-
+width:600px;>
+	<h2 style="text-align:center;">TOOLS
+	FOR ELECTRICALS</h2>
+	<p class="W3-capacity"><i>Equipment
+	</i></p>
+	<p class="w3-opacity">We have
+	created a fictional Electricals web.
+    lorem ipsum dolor sit amet,
+    consecteteur adipiscing elit.
+   We have soo many hand-electricals tools to make
+   working easier. So we will look at examples of such tools,
+function,and soon.</p>
+</section>
+<section class="w3-row-padding
+ w3-center w3-light-grey">
+ <article class="w3-fourth">
+		<h1 style="text-align:center;">STRAIGHT BLADE SCREWDRIVER</h1>
+		
+
+    <img  src="/C:/Users/dorby-launch/Desktop/PROJECT/image/hat.jpg" alt="Screwdriver" style="width:80%;"></article>
+
+	<p style="text-align:justify;">Screw driver is a hand tool that
+	is used for turning screws. It consist of a metal rod
+with a flat or cross-shaped and that fit into the top of the screw. For screws with one straight diametral slot cut
+across the head, standards screwdrivers with flat blade tips and in a variety of sizes are used. A typical simple screwdriver has a handle and a shaft, ending in a tip the user put into the screw head before turning the handle.</p></section>
+
+	<section class="w3-row-padding
+ w3-center w3-light-grey">
+ <article class="w3-fourth">
+     <h1 style="text-align:center;">UTILITY KNIFE</h1>
+     <img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/knife.jpg" 
+     style="width:80%;">
+  </article> 
+  <p>Utility knife is any type of knife used for general manual work purposes. Today the term utility knife also includes small folding, retractable- and/ or replaceable-razor blade knifes suited for use in the general work place or in the construction industries. It is a fantastic tool to have in the home tool box or junk drawer. It cut with a removable razor-blade, so the edge is both incredibly sharp and very disposable. 
+   </p>
+   </section>
+
+    <section class="w3-row-padding
+   w3-center w3-light-grey">
+   	<article class="w3-fourth">
+   		<h1 style="text-align:center;">TONGUE AND GROOVE-PLIERS</h1>
+   		<img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/tongue.jpg"
+   		style="width: 90%">
+   	</article>
+   	<p>Tongue and groove pliers are types of slip-joint pliers.They are commonly used for turning and holding nuts and bolts, gripping irregularly shaped objects,and clamping materials. It is also possible to rotate objects while keeping them in one position.</p>
+   </section>
+
+ <section class="w3-row-padding
+   w3-center w3-light-grey">
+   	<article class="w3-fifth">
+   		<h1 style="text-align:center;">PHILIPS SCREWDRIVER</h1>
+   		<img src="file:C:/Users/dorby-launch/Desktop/PROJECT/image/screw.jpg"
+   		style="width:70%">
+   	</article>
+   	<p>These tools are designed to fit screws with Phillips heads,which have a cross -shaped recess-hence the alternative name of cross screwdriver. They were invented to cope with higher torsion. A typical simple screwdriver has a handle and a shaft, ending in a tip the user puts into the screw head before turning the handle.</p>
+   </section>
+
+   <section class="w3-row-padding
+   w3-center w3-light-grey">
+   	<article class="w3-sixth">
+   		<h1 style="text-align:center;">MULTIMETER</h1>
+   		<img src="file:C:/Users/dorby-launch/Desktop/PROJECT/image/multimeter.png">
+   	</article>
+   	<p>A multimeter is mainly used to measure the three basic electricals characteristics of voltage, current,and resistance. It can also be used to test continuity between two points in an electrical circuit.</p>
+   </section>
+
+   <section class="w3-row-padding
+   w3-center w3-light-grey">
+   	<article class="w3-seventh">
+   		<h1 style="text-align:center;">TWIST DRILL</h1>
+   		<img src="file:C:/Users/dorby-launch/Desktop/PROJECT/image/drill.png"
+   		style="width:50%">
+   	</article>
+   	<p>Twist drill bits are used for drilling through anything from wood to plastic to metal products,but not masonry and concrete products. However, their primary use is for drilling through metal.</p>
+   </section>
+
+   <section class="w3-row-padding
+   w3-center w3-light-grey">
+   	<article class="w3-eigth">
+   		<h1 style="text-align:center;">SPIRIT LEVEL</h1>
+   		<img src="C:/Users/dorby-launch/Desktop/PROJECT/image/spirit.png"
+   		style="width:60%">
+   	</article>
+   	<p>A spirit level is used for determinind horizontal and vertical levels and can be used on a variety of DIY projects in and around the home. It is also used to designed,to indicate whether a surface is level on the horizontal or vertical planes,and there are a variety of sizes and designs for every project.</p>
+   </section>
+
+<section class="w3-row-padding
+w3-center w3-light-grey">
+	<article class="w3-elenventh">
+		<h1 style="text-align:center;">WIRE STRIPPERS</h1>
+		<img src="C:/Users/dorby-launch/Desktop/PROJECT/image/strippers.jpg"
+		style="width:70%">
+	</article>
+	<p>A wire stripper is a small hand-held tool that is used to remove the insulation from electric wires.It is portable and extremely popular among electricians and even DIYers for removing the insulation in order to replace or repair the wire.</p>
+</section>
+<section class="w3-row-padding
+w3-center w3-light-grey">
+  <article class="w3-third">
+    <h1 style="text-align:center;">NON-CONTACT VOLTAGE TESTER</h1>
+    <img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/tster.jpg"
+     style="width:80%;">
+  </article>
+  <p> A Non Contact Voltage Tester alllows you to check for the voltage in wires or devices without you having to touch any parts/wires</p></section>
+
+  <section class="w3-row-padding
+w3-center w3-light-grey">
+  <article class="w3-third">
+    <h1 style="text-align:center;">NEEDLE-NOSE PLIER</h1>
+    <img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/nose.png"
+     style="width:80%;">
+  </article>
+<p> A Needle Nose Plier are both cutting and holding tool commonly used by artisian,electricians,engineers,jewellery designers and other tradesmen to bend,coil,re-position and snip wires. With the help of the long nose gives excellent control while the cutting edge near the pliers joint provides "one tool"convenience. </p>
+<section class="w3-row-padding
+w3-center w3-light-grey">
+  <article class="w3-third">
+    <h1 style="text-align:center;">SCRIBER</h1>
+    <img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/scriber.png"
+     style="width:60%;">
+  </article>
+  <p>A scriber is use for marking liner on work surfaces. It has a harden needle point which can be drawn along the straight edge of a rule or try square.</p>
+
+  <section class="w3-row-padding
+w3-center w3-light-grey">
+  <article class="w3-third">
+    <h1 style="text-align:center;">MICROMETER</h1>
+    <img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/mic.png"
+     style="width:80%;">
+  </article>
+  <p>It is use to take more exact measurement down to 0.01mm.It is an instrument of extreeme accuracy and must be treated with special care and kept in a nice case when not in use.</p>
+
+<video width="320"
+height="240" controls>
+  <source src="C:/Users/dorby-launch/Desktop/PROJECT/video/comp.MP4" type="video/MP4">
+</video>
+<p>Watch Video</p>
+
+<h2 style="text-align:center;">Electricals Symbols And Their Names</h2>
+<img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/componeent.png">
+<img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/yts.png">
+<img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/earth.png">
+<img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/last.png">
+<img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/emi.png">
+<img src="file:///C:/Users/dorby-launch/Desktop/PROJECT/image/symbol.png">
+
+
+
+<p style="text-align:center">More topics</p>
+ <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\safe.html">Safety Tools</a><br/>
+  <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\ANTHERFLY.html">Tools and Equipment</a><br/>
+  <a href="#">Fuse</a><br/>
+  <a href="#">Physics</a><br/>
+  <a href="#">Accessories</a>
+
+  <article class="all-browsers">
+   <h1>Most Popular Browers</h1>
+   <article class="browser">
+    <h2>Google Chrome</h2>
+    <p>Google chrome is web browser developed by Google, released in 2008.</p>
+ </article>
+ <article class="browser">
+   <h2>Microsoft edge</h2>
+   <p>Microsoft Edge is a web browser developed by Microsoft,released in 2013.</p>
+ </article>
+<article class="browser">
+  <h2><i>About Us</i></h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam</p>
+</article>
+
+<footer>
+  <p>Asvan-launcher<br>
+    <a href="C:\Users\dorby-launch\Desktop\PROJECT\html\Asvan launcher.html"></a></p>
+</footer>
+<article class="browser">
+  <div class="container">
+          <label for="uname">
+          </label>
+          <input type="text"
+          placeholder="Enter Email" name="uname" required>
+        </div>
+</article>
+</article>
+
+<footer class="weg">
+  <a href="#" class="fa fa-facebook-official"></a>
+  <a href="#" class="fa fa-pinterest-p"></a>
+  <a href="#" class="fa fa-twitter"></a>
+  <a href="#" class="fa fa-flickr"></a>
+  <a href="#" class="fa fa-linkedin"></a>
+  <a href="#" class="fa fa-whatsapp"></a>
+  <h3 class="w3-medium">
+  Powered by <a href="www.asvan.com" target="_blank">Asvan</a>
+  </h3>
+  <p>Copyright @2021 All rights reserved |
+  This template is made by Amzi Group Of Company.</p>
+</footer>
+</body>
+</html>
