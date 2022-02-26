@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator UI Design</title>
+	<link rel="stylesheet" type="text/css" href="C:\Users\dorby-launch\Desktop\PROJ\html\calc.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+ 
+</head>
+
+<style>
+ 
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0,0,0, 0.9);
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: left;
+  margin-top: 0px;
+  top: 80px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: grey;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  color: white;
+  top: 0px;
+  right: 45px;
+  font-size: 30px;
+}
+
+.trong {
+  text-align: left;
+  padding: 14px 16px;
+  background-color: indigo;
+  color: whitesmoke;
+}
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+</style>
+
+
+
+<body>
+
+
+    <div id="myNav" class="overlay">
+  <footer class="trong">ASV Launcher</footer>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <ul><a href="C:\Users\dorby-launch\Desktop\PROJ\html\Asvan launcher.html"><i class="fa fa-home"></i>Home</a>
+   <a href="C:\Users\dorby-launch\Desktop\PROJ\html\api.html"><i class="fa fa-laptop"></i>Courses</a>
+   <a href="#"><i class="fa fa-exclamation-circle"></i>About</a> 
+   <hr>
+   <a href="C:\Users\dorby-launch\Desktop\PROJ\html\my stopwatch.html"><i class="fa fa-clock-o"></i>Timer</a>
+    <a href="#">Settings</a>
+ 
+</ul>
+  </div>
+</div>
+
+  <span style="font-size:30px; color: white; top: 20px; position: absolute; left: 10px; cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<script>
+
+function openNav() {
+  document.getElementById("myNav").style.width = "50%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+   <form class="calculator" name="calc">
+   	  <input  class="value" type="text" name="txt" readonly="">
+   	    <span  class="num clear" onclick="document.calc.txt.value =''">c</span>
+   	     <span  class="num" onclick="document.calc.txt.value +='/'">/</span>
+   	     <span class="num" onclick="document.calc.txt.value +='*'">*</span>
+   	     <span class="num" onclick="document.calc.txt.value +='7'">7</span>
+   	     <span class="num" onclick="document.calc.txt.value +='8'">8</span>
+   	     <span class="num" onclick="document.calc.txt.value +='9'">9</span>
+   	     <span class="num" onclick="document.calc.txt.value +='-'">-</span>
+   	     <span class="num" onclick="document.calc.txt.value +='4'">4</span>
+   	     <span class="num" onclick="document.calc.txt.value +='5'">5</span>
+   	     <span class="num" onclick="document.calc.txt.value +='6'">6</span>
+   	     <span class="num plus" onclick="document.calc.txt.value +='+'">+</span>
+   	     <span class="num" onclick="document.calc.txt.value +='3'">3</span>
+   	     <span class="num" onclick="document.calc.txt.value +='2'">2</span>
+   	     <span class="num" onclick="document.calc.txt.value +='1'">1</span>
+         <span class="num" onclick="document.calc.txt.value +='0'">0</span>
+         <span class="num" onclick="document.calc.txt.value +='00'">00</span>
+  	     <span class="num" onclick="document.calc.txt.value +='.'">.</span>  <span class="num equal" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>
+   </form>
+
+</body>
+</html>
