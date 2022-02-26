@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <style>
+  .fa{
+    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 3px 1px;
+    
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-twitter{
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-linkedin{
+    background: #007bb5;
+    color: white;
+  }
+  .fa-whatsapp{
+     background: green;
+     color: white;
+  }
+  .fa-pinterest-p{
+    background: #cb2027;
+    color: white;
+  }
+  .fa-flickr{
+    background: blue;
+    color: white;
+  }
+  .weg {
+    background-color: black;
+    color: white;
+  }
+  @media screen and (max-height: 450px) {
+  .fa {font-size: 20px;}
+}
+</style>
+
+	<style>
+body {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.tye{
+  background-color: white;
+  color: black;
+  padding: 0px;
+  width: 10%;
+  text-align: left;
+ }
+ .tye:hover, .tye:focus{
+  color: blue;
+ }
+</style>
+	
+<style>
+  .all-browsers {
+    margin: 0;
+    padding: 5px;
+    background-color: grey;
+  }
+
+  .all-browsers > h1, .browser{
+    margin: 10px;
+    padding: 5px;
+    color: black;
+  }
+
+  .browser{
+    background: white;
+  }
+
+  .browser > h2, p{
+    margin: 4px;
+    font-size: 90%;
+  }
+  footer {
+    text-align: center;
+    padding: 3px;
+    background-color: blueviolet;
+    color: white;
+  }
+  .footer{
+    padding: 8px;
+    background-color: grey;
+    color: black;
+  }
+</style>
+
+
+</style>
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0,0,0, 0.9);
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: left;
+  margin-top: 0px;
+  top: 80px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: grey;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  color: white;
+  top: 0px;
+  right: 45px;
+  font-size: 30px;
+}
+
+.trong {
+  text-align: left;
+  padding: 14px 16px;
+  background-color: indigo;
+  color: whitesmoke;
+}
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+</style>
+
+<style>
+  body {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 20px;
+  }
+  #myBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 8px;
+    border: none;
+    outline: none;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 60%;
+  }
+  #myBtn: hover {
+    background-color: #555;
+  }
+</style>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial,Helvetica,sans-serif;
+  }
+  .topnav{
+    overflow: hidden;
+    background-color: blueviolet;
+  }
+  .topnav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav a.active {
+    background-color: blueviolet;;
+    color: white;
+  }
+  @media screen and (max-height: 450px) {
+  .topnav a {font-size: 20px}
+}
+</style>
+
+</head>
+<body>
+
+<div class="topnav">
+    <a href="C:\Users\dorby-launch\Desktop\PROJ\html\api.html" title=" Back to Courses"m><i class="fa fa-arrow-left"></i></a>
+    <a class="active">Peripherals and Expansion</a>
+    <a href="C:\Users\dorby-launch\Desktop\PROJ\html\Asvan launcher.html"><i class="fa fa-home" title="Home"></i></a>
+  
+    <a href="#" title="More"><i class="fa fa fa-ellipsis-v" class="pen"></i></a>
+    </div>
+  
+
+
+ <div id="myNav" class="overlay">
+  <footer class="trong">ASV Launcher</footer>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <ul><a href="C:\Users\dorby-launch\Desktop\PROJ\html\Asvan launcher.html"><i class="fa fa-home"></i>Home</a>
+   <a href="C:\Users\dorby-launch\Desktop\PROJ\html\api.html"><i class="fa fa-laptop"></i>Courses</a>
+   <a href="#"><i class="fa fa-exclamation-circle"></i>About</a> 
+   <hr>
+   <a href="C:\Users\dorby-launch\Desktop\PROJ\html\my stopwatch.html"><i class="fa fa-clock-o"></i>Timer</a>
+   <a href="C:\Users\dorby-launch\Desktop\PROJ\html\calcus.html"><i class="fa fa-calculator"></i>Calc</a>
+    <a href="#" ><i class="fa fa-cog fa-spin fa-3x fa-fw"></i>Settings</a>
+   <button onclick="myFunction()"
+style="width:auto;" class="tye">Dark/Light mode</button>
+ 
+</ul>
+  </div>
+</div>
+
+<button onclick="topFunction()"
+  id="myBtn" title="Go to top"><i class="fa fa-chevron-up"></i></button>
+<script>
+  //Get the button
+  var mybutton=
+  document.getElementById('myBtn');
+
+  //When the user scrolls down 20px from the top of the document,show the button
+  window.onscroll=function()
+  {scrollFunction()};
+  function scrollFunction(){
+    if (document.body.scrollTop >
+      20||
+      document.documentElement.scrollTop >
+      20){
+      mybutton.style.display="block";
+    } else{
+      mybutton.style.display="none";
+    }
+  }
+  
+  // When the user clicks on the button,scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop=0;
+    document.documentElement.scrollTop=0;
+  }
+</script>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<script>
+
+function openNav() {
+  document.getElementById("myNav").style.width = "50%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+  
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+<h1 style="text-align:center;">Computer System</h1>
+ <p>Component of a computer system:</p>
+   <p>1.People/users(IT professionals and end user)</p>
+   <p>2.Procedures (step by step instructions performed in comp)</p>
+   <p>3. Data/Information (raw facts and figures. eg:texts,letters,image.etc.)</p>
+   <p>4.Hardware ie. Input-Processing-Storage-Output</p>
+   <p>5.Software</p>
+           <h2>Computer Peripherals</h2>
+           <p> Peripherals are the components of a computer which communicate with the processor (CPU) but are not located directly on the motherboard.</p>
+             <p>&nbsp;Some peripherals are linked by expansion cards in the expansion slots on the motherboard connected directly on the ports via cables attached on them.</p>
+              <p>Examples of such periherals are: keyboard,mouse,printer,scanner etc.</p><br>
+              <i>NB: Peripherals are simply, the components that are not in-built in the motherboard. A component that is built in the motherboard already by the manufacturer, is not a peripheral! eg:processor,cmos battery etc.</i><br><br>
+              <p><i>Keyboard-</i>This has keypad and keys to handle specific functions required by the computer. This resembles a typewriter. </p>
+         <h4 style="text-align: center;"><u>Categories of Keyboard</u></h4>     <p>1.Alphanumeric Keys (alphabets & numbers) comprises of alphabets (A-Z),numbers (0-9) and other characters.</p>
+       <p>2.Special keys: they perform specific functions 
+       Eg: Enter(return),Backspace,Delete,PageUp(pgup),capslock,shift,Alt(alternate,etc.</p>
+       <p>3. Function keys; F1-F12,F1-F10</p>  
+       <h4 style="text-align:center;">Types of Keyboard</h4>
+       <p>There are two types of keyboard. Namely;</p>
+       <p>1.STANDARD KEYBOARD :This has functional keys from F1-F10.</p>
+       <p>Enhanced keyboard- it has functional key from   </p>
+  <article class="all-browsers">
+   <h1>Most Popular Browers</h1>
+   <article class="browser">
+    <h2>Google Chrome</h2>
+    <p>Google chrome is web browser developed by Google, released in 2008.</p>
+ </article>
+ <article class="browser">
+   <h2>Microsoft edge</h2>
+   <p>Microsoft Edge is a web browser developed by Microsoft,released in 2013.</p>
+ </article>
+<article class="browser">
+  <h2><i>About Us</i></h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam</p>
+</article>
+
+<footer>
+  <p>Asvan-launcher<br>
+    <a href="C:\Users\dorby-launch\Desktop\PROJ\html\Asvan launcher.html"></a></p>
+</footer>
+<article class="browser">
+  <div class="container">
+          <label for="uname">
+          </label>
+          <input type="text"
+          placeholder="Enter Email" name="uname" required>
+        </div>
+</article>
+</article>
+
+<footer class="weg">
+  <a href="#" class="fa fa-facebook-official"></a>
+  <a href="#" class="fa fa-pinterest-p"></a>
+  <a href="#" class="fa fa-twitter"></a>
+  <a href="#" class="fa fa-flickr"></a>
+  <a href="#" class="fa fa-linkedin"></a>
+  <a href="#" class="fa fa-whatsapp"></a>
+  <h3 class="w3-medium">
+  Powered by <a href="www.asvan.com" target="_blank">Asvan</a>
+  </h3>
+  <p>Copyright @2021 All rights reserved |
+  This template is made by Amzi Group Of Company.</p>
+</footer> 
+</body>
+</body>
+</html>

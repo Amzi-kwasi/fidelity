@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="C:\Users\dorby-launch\Desktop\PROJ\html\style.css">
+    <link rel="stylesheet" type="text/css" href="C:\Users\dorby-launch\Desktop\PROJ\html\script.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    
+</head>
+
+      <style>
+         button {
+         font-size: 1.1em;
+         background-color: red;
+         color: white;
+         border: 2px solid black;
+         box-shadow: 4px 4px 4px #999999;
+                 }
+         button:hover, button:focus, button:active {
+          /* swap colors */
+          color: red;
+          background-color: black;
+          cursor: pointer; /* displays a hand */
+                     }  
+       </style>
+
+       <style type="text/css">
+    
+        p {
+        font-size: 100px;
+        position: absolute;
+        bottom: 50%;
+        text-align: center;
+        text-align: center;
+        right: 30%;
+        align-items: center;
+        justify-content: space-around;
+          }
+       </style>
+
+     <style>
+        body {
+        font-family: 'Lato', sans-serif;
+             }
+
+        .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0,0,0, 0.9);
+        background-color: white;
+        overflow-x: hidden;
+        transition: 0.5s;
+             }
+
+        .overlay-content {
+          position: relative;
+         top: 25%;
+        width: 100%;
+        text-align: left;
+        margin-top: 0px;
+        top: 80px;
+             }
+
+        .overlay a {
+         padding: 8px;
+         text-decoration: none;
+         font-size: 16px;
+         color: black;
+         display: block;
+         transition: 0.3s;
+                     }
+
+          .overlay a:hover, .overlay a:focus {
+           color: grey;
+                }
+
+
+           .overlay .closebtn {
+           position: absolute;
+           color: white;
+           top: 0px;
+           right: 45px;
+           font-size: 30px;
+                              }
+
+           .trong {
+           text-align: left;
+           padding: 14px 16px;
+           background-color: indigo;
+            color: whitesmoke;
+                  }
+           @media screen and (max-height: 450px) {
+            .overlay a {font-size: 20px}
+           .overlay .closebtn {
+           font-size: 40px;
+           top: 15px;
+           right: 35px;
+                          }
+             }
+                </style>
+
+          <style>
+          body {
+          background-color: white;
+          color: black;
+              }
+
+          .dark-mode {
+           background-color: black;
+           color: white;
+                    }
+            </style>
+
+         <style>
+           body {
+             margin: 0;
+             font-family: Arial,Helvetica,sans-serif;
+                }
+             .topnav{
+              overflow: hidden;
+              background-color: blueviolet;
+                    }
+              .topnav a{
+              float: center;
+              color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav a.active {
+    background-color: blueviolet;;
+    color: white;
+  }
+  .http {
+  position: absolute;
+  color: white;
+  top: -10px;
+  right: 45px;
+  font-size: 0px;
+}
+ </style>
+<body>
+ <div class="topnav">
+    <a class="active">&emsp;&ensp;Home-Timer</a>
+    <a href="#" title="tools">Tools</a>
+    <a href="#" title="Help" class="risk">Help</a>
+    
+    <a href="C:\Users\dorby-launch\Desktop\PROJ\html\Asvan launcher.html" title="More" class="http">More</a>
+    </div>
+     
+     <div class="timer-display">
+    <p id="timer"></p>
+</div>
+
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+
+<div id="myNav" class="overlay">
+  <footer class="trong">ASV Launcher</footer>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <ul><a href="C:\Users\dorby-launch\Desktop\PROJ\html\Asvan launcher.html"><i class="fa fa-home"></i>Home</a>
+   <a href="#"><i class="fa fa-laptop"></i>Courses</a>
+   <a href="#"><i class="fa fa-exclamation-circle"></i>About</a> 
+   <hr>
+   <a href="C:\Users\dorby-launch\Desktop\PROJ\html\my stopwatch.html"><i class="fa fa-clock-o"></i>Timer</a>
+    <a href="#" >Settings</a>
+</ul>
+<button onclick="myFunction()"
+style="width:auto; background-color: royalblue;color: white;" class="tye">Dark/Light mode</button>
+
+  </div>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<script>
+
+function openNav() {
+  document.getElementById("myNav").style.width = "50%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+    <div class="main" style="text-align:left;">
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="hours">Hours</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="minutes">Minutes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="seconds">Seconds</label>&nbsp;
+
+        <br>
+
+        <select name="hours" id="hours">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+        </select>
+
+        <select name="minutes" id="minutes">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+            <option value="32">32</option>
+            <option value="33">33</option>
+            <option value="34">34</option>
+            <option value="35">35</option>
+            <option value="36">36</option>
+            <option value="37">37</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+            <option value="45">45</option>
+            <option value="46">46</option>
+            <option value="47">47</option>
+            <option value="48">48</option>
+            <option value="49">49</option>
+            <option value="50">50</option>
+            <option value="51">51</option>
+            <option value="52">52</option>
+            <option value="53">53</option>
+            <option value="54">54</option>
+            <option value="55">55</option>
+            <option value="56">56</option>
+            <option value="57">57</option>
+            <option value="58">58</option>
+            <option value="59">59</option>
+        </select>
+
+        <select name="seconds" id="seconds">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+            <option value="32">32</option>
+            <option value="33">33</option>
+            <option value="34">34</option>
+            <option value="35">35</option>
+            <option value="36">36</option>
+            <option value="37">37</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+            <option value="45">45</option>
+            <option value="46">46</option>
+            <option value="47">47</option>
+            <option value="48">48</option>
+            <option value="49">49</option>
+            <option value="50">50</option>
+            <option value="51">51</option>
+            <option value="52">52</option>
+            <option value="53">53</option>
+            <option value="54">54</option>
+            <option value="55">55</option>
+            <option value="56">56</option>
+            <option value="57">57</option>
+            <option value="58">58</option>
+            <option value="59">59</option>
+        </select><br>
+
+        <button class="start-timer" id="startTimer" style="background-color:green;color: white;bottom: 5%;position: absolute;" class="fa fa-flickr" title="Click me once|">Start Timer</button>
+
+
+    </div>
+
+<script>
+    
+    var hours = 0;
+var minutes = 0;
+var seconds = 0;
+var interval = null;
+
+document.getElementById('hours').addEventListener('change', e => {
+    hours = +e.target.value;
+});
+
+document.getElementById('minutes').addEventListener('change', e => {
+    minutes = +e.target.value;
+});
+
+document.getElementById('seconds').addEventListener('change', e => {
+    seconds = +e.target.value;
+});
+
+document.getElementById('startTimer').addEventListener('click', () => {
+    var timeInSeconds = (hours * 60 * 60) +
+        (minutes * 60) +
+        seconds;
+
+    var displayTime = () => {
+        var displayHours = Math.floor(timeInSeconds / (60 * 60));
+        var remainder = timeInSeconds - (displayHours * 60 * 60);
+        var displayMinutes = Math.floor(remainder / 60);
+        var displaySeconds = remainder - (displayMinutes * 60);
+        document.getElementById("timer").innerHTML = displayHours + " : " + displayMinutes + " : " + displaySeconds;
+    };
+    interval = setInterval(() => {
+        displayTime();
+        timeInSeconds -= 1;
+        if (timeInSeconds < 0) {
+            clearInterval(interval);
+        }
+    }, 1000);
+});
+</script>
+        
+  <button onclick="showAlert()" style="position: absolute;right: 10%;bottom: 5%;">Alert</button>
+
+  <script>
+  function showAlert() {
+    var myText = "YOUR TIME IS UP||";
+    alert (myText);
+  }
+  </script>
+
+<script>
+
+function display_ct5() {
+var x = new Date()
+var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM';
+
+var x1=x.getMonth() + 1+ "/" + x.getDate() + "/" + x.getFullYear(); 
+x1 = x1 + " - " +  x.getHours( )+ ":" +  x.getMinutes() + ":" +  x.getSeconds() + ":" + ampm;
+document.getElementById('ct5').innerHTML = x1;
+display_c5();
+ }
+ function display_c5(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct5()',refresh)
+}
+display_c5()
+</script>
+
+<body onload=display_ct();>
+<span id='ct5' style="right: 5%;position: absolute;top: 5%;color: red;"></span>
+</body>
+</html>
